@@ -1,14 +1,27 @@
 package com.kindleassistant.manager;
 
-import android.content.Context;
-
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.App;
 
 public class VolleyMgr {
-	public static <T> void sendGsonRequest(Context mContext, GsonRequest request) {
-		RequestQueue mRequestQueue = Volley.newRequestQueue(mContext);
+
+	private static VolleyMgr mInstance;
+	private RequestQueue mRequestQueue;
+
+	private VolleyMgr() {
+		mRequestQueue = Volley.newRequestQueue(App.getContext());
+	}
+
+	public static VolleyMgr getInstance() {
+		if (mInstance == null) {
+			mInstance = new VolleyMgr();
+		}
+		return mInstance;
+	}
+
+	public void sendRequest(Request request) {
 		mRequestQueue.add(request);
 	}
 }
