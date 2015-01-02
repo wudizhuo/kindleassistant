@@ -20,18 +20,29 @@ import com.google.gson.JsonSyntaxException;
  * @param <T>
  */
 public class GsonRequest<T> extends Request<T> {
+	
+	  /** Charset for request. */
+    private static final String PROTOCOL_CHARSET = "utf-8";
+
+    /** Content type for request. */
+    private static final String PROTOCOL_CONTENT_TYPE =
+        String.format("application/json; charset=%s", PROTOCOL_CHARSET);
+	
 	private Gson gson;
 	private Class<T> clazz;
 	private Listener<T> listener;
+	private Object requst;
 
-	public GsonRequest(String url, Class<T> clazz, Listener<T> listener) {
-		this(Method.POST, url, clazz, null, listener);
+	public GsonRequest(String url, Object requst, Class<T> clazz,
+			Listener<T> listener) {
+		this(Method.POST, url, requst, clazz, null, listener);
 	}
 
-	public GsonRequest(int method, String url, Class<T> clazz,
+	public GsonRequest(int method, String url, Object requst, Class<T> clazz,
 			ErrorListener errorListener, Listener<T> listener) {
 		super(method, url, errorListener);
 		gson = new Gson();
+		this.requst = requst;
 		this.clazz = clazz;
 		this.listener = listener;
 	}
@@ -54,4 +65,36 @@ public class GsonRequest<T> extends Request<T> {
 	protected void deliverResponse(T response) {
 		listener.onResponse(response);
 	}
+	
+	/**
+     * @deprecated Use {@link #getBodyContentType()}.
+     */
+    @Override
+    public String getPostBodyContentType() {
+        return getBodyContentType();
+    }
+
+    /**
+     * @deprecated Use {@link #getBody()}.
+     */
+    @Override
+    public byte[] getPostBody() {
+        return getBody();
+    }
+
+    @Override
+    public String getBodyContentType() {
+        return PROTOCOL_CONTENT_TYPE;
+    }
+
+    @Override
+    public byte[] getBody() {
+    	String mRequestBody = gson.toJson(requst);
+        try {
+            return mRequestBody == null ? null : mRequestBody.getBytes(PROTOCOL_CHARSET);
+        } catch (UnsupportedEncodingException uee) {
+            uee.printStackTrace();
+            return null;
+        }
+    }
 }
