@@ -7,6 +7,6 @@
     <color name="page_bg">#EDF1F4</color>
 	<color name="text_color">#000</color>
 	
-	<drawable name="send_but_pressed">#F7F7F7</drawable>
-	<drawable name="send_but_nomal">#8B0000</drawable>
+	<drawable name="send_but_pressed">#8B0000</drawable>
+	<drawable name="send_but_nomal">#CD3333</drawable>
 </resources>

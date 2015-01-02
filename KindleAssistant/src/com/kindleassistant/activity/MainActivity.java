@@ -1,6 +1,8 @@
 package com.kindleassistant.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.kindleassistant.AppConstants;
 import com.kindleassistant.R;
@@ -17,4 +19,9 @@ public class MainActivity extends BaseActivity {
 		VolleyMgr.getInstance().getJson(AppConstants.SEND_URL);
 	}
 
+	public void Setting(View v){
+			Intent intent = new Intent (this,MainActivity.class);			
+			startActivity(intent);			
+			this.finish();
+	}
 }
