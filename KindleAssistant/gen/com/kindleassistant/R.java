@@ -50,7 +50,8 @@ public final class R {
     public static final class style {
         public static final int Dialog=0x7f060000;
         public static final int progress_indeterminate=0x7f060001;
+        public static final int sendbutton=0x7f060003;
         public static final int titleBar=0x7f060002;
-        public static final int title_text=0x7f060003;
+        public static final int title_text=0x7f060004;
     }
 }
