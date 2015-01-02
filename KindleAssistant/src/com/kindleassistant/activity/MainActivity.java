@@ -16,12 +16,8 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	
-		VolleyMgr.getInstance().getJson(AppConstants.SEND_URL);
+
 	}
 
-	public void Setting(View v){
-			Intent intent = new Intent (this,MainActivity.class);			
-			startActivity(intent);			
-			this.finish();
-	}
+
 }
