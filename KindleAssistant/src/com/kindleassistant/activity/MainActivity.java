@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Response.Listener;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnOpenedListener;
 import com.kindleassistant.App;
 import com.kindleassistant.AppConstants;
 import com.kindleassistant.R;
@@ -20,8 +22,10 @@ import com.kindleassistant.entity.PreView;
 import com.kindleassistant.entity.PreViewRsp;
 import com.kindleassistant.entity.SendUrl;
 import com.kindleassistant.entity.SendUrlRsp;
+import com.kindleassistant.fragment.SlidingMenuRight;
 import com.kindleassistant.manager.VolleyMgr;
 import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.utils.StatServiceUtil;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
 	private String url;
@@ -29,19 +33,19 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	private String user_url;
 	private String user_email;
 	private EditText et_user_url;
+	public static String RIGHT_FRAGMENT = "slidingmenu_right";
+	private SlidingMenu slidingmenu;
 
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		App.getApp().appinit();
 
+		initRightMenu();
+
 		et_user_url = (EditText) findViewById(R.id.et_user_url);
-		// 设置右上角按钮显示
-		Button btn_title_right = (Button) findViewById(R.id.btn_title_right);
-		btn_title_right.setText("设置");
-		btn_title_right.setVisibility(View.VISIBLE);
 		// 监听点击事件
 		findViewById(R.id.bt_send).setOnClickListener(this);
 		findViewById(R.id.btn_title_right).setOnClickListener(this);
@@ -68,12 +72,40 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			// 我们这里处理所有的文本类型
 			if (type.startsWith("text/")) {
 				// 处理获取到的文本，这里我们用TextView显示
-				 String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);  
-				 this.user_url = sharedUrl;
-				 et_user_url.setText(this.user_url);
+				String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
+				this.user_url = sharedUrl;
+				et_user_url.setText(this.user_url);
 			}
 		}
 
+	}
+
+	private void initRightMenu() {
+		Button btn_title_left = (Button) findViewById(R.id.btn_title_left);
+		btn_title_left.setVisibility(View.INVISIBLE);
+		View btn_title_right = findViewById(R.id.btn_title_right);
+		btn_title_right.setVisibility(View.VISIBLE);
+		btn_title_right
+				.setBackgroundResource(R.drawable.content_right_btn_selector);
+
+		slidingmenu = new SlidingMenu(this);
+		slidingmenu.setMode(SlidingMenu.RIGHT);
+		slidingmenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		slidingmenu.setBehindOffset(getWindowManager().getDefaultDisplay()
+				.getWidth() / 3);
+		slidingmenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+		slidingmenu.setMenu(R.layout.layout_menu_right);
+		getSupportFragmentManager()
+				.beginTransaction()
+				.replace(R.id.slidingmenu_right, new SlidingMenuRight(),
+						RIGHT_FRAGMENT).commit();
+		slidingmenu.setOnOpenedListener(new OnOpenedListener() {
+
+			@Override
+			public void onOpened() {
+				StatServiceUtil.trackEvent("打开右菜单");
+			}
+		});
 	}
 
 	@Override
@@ -94,9 +126,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			}
 			break;
 		case R.id.btn_title_right:
-
-			Intent intent = new Intent(this, SettingActivity.class);
-			startActivity(intent);
+			slidingmenu.showMenu();
 			break;
 		case R.id.bt_clear:
 			et_user_url.setText("");
