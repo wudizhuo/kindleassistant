@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_slidingright"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_download"
+        style="@style/menu_text"
+        android:gravity="center"
+        android:text="离线下载" />
+
+    <include layout="@layout/divider_line_h" />
+
+    <TextView
+        android:id="@+id/tv_setting"
+        style="@style/menu_text"
+        android:gravity="center"
+        android:text="设置" />
+
+</LinearLayout>
