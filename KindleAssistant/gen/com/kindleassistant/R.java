@@ -8,14 +8,17 @@
 package com.kindleassistant;
 
 public final class R {
+    public static final class array {
+        public static final int sp_emails=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int content_bg=0x7f040000;
-        public static final int menu_bg=0x7f040001;
-        public static final int page_bg=0x7f040003;
-        public static final int text_color=0x7f040004;
-        public static final int title_bar_bg=0x7f040002;
+        public static final int content_bg=0x7f050000;
+        public static final int menu_bg=0x7f050001;
+        public static final int page_bg=0x7f050003;
+        public static final int text_color=0x7f050004;
+        public static final int title_bar_bg=0x7f050002;
     }
     public static final class drawable {
         public static final int btn_blue=0x7f020000;
@@ -32,26 +35,37 @@ public final class R {
         public static final int welcome=0x7f020009;
     }
     public static final class id {
-        public static final int btn_title_left=0x7f070000;
-        public static final int btn_title_right=0x7f070002;
-        public static final int progress_bar=0x7f070003;
-        public static final int tv_msg=0x7f070004;
-        public static final int tv_titlebar_midtv=0x7f070001;
+        public static final int bt_clear=0x7f080001;
+        public static final int bt_preview=0x7f080002;
+        public static final int bt_save_useremail=0x7f080007;
+        public static final int bt_send=0x7f080003;
+        public static final int btn_title_left=0x7f080009;
+        public static final int btn_title_right=0x7f08000b;
+        public static final int et_content=0x7f080004;
+        public static final int et_user_email=0x7f080005;
+        public static final int et_user_url=0x7f080000;
+        public static final int progress_bar=0x7f08000c;
+        public static final int sp_emails=0x7f080006;
+        public static final int tv_msg=0x7f08000d;
+        public static final int tv_titlebar_midtv=0x7f08000a;
+        public static final int web_howset=0x7f080008;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int appstart=0x7f030001;
-        public static final int title_bar=0x7f030002;
-        public static final int view_progress_indeterminate=0x7f030003;
+        public static final int activity_preview=0x7f030001;
+        public static final int activity_setting=0x7f030002;
+        public static final int appstart=0x7f030003;
+        public static final int title_bar=0x7f030004;
+        public static final int view_progress_indeterminate=0x7f030005;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
+        public static final int app_name=0x7f060000;
     }
     public static final class style {
-        public static final int Dialog=0x7f060000;
-        public static final int progress_indeterminate=0x7f060001;
-        public static final int sendbutton=0x7f060003;
-        public static final int titleBar=0x7f060002;
-        public static final int title_text=0x7f060004;
+        public static final int Dialog=0x7f070000;
+        public static final int progress_indeterminate=0x7f070001;
+        public static final int sendbutton=0x7f070003;
+        public static final int titleBar=0x7f070002;
+        public static final int title_text=0x7f070004;
     }
 }
