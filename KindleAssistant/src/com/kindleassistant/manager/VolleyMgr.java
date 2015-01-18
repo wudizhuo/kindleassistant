@@ -1,5 +1,6 @@
 package com.kindleassistant.manager;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
@@ -22,6 +23,11 @@ public class VolleyMgr {
 	}
 
 	public void sendRequest(Request request) {
+//		try {
+//			request.getHeaders().put("custom_header1", "123");
+//		} catch (AuthFailureError e) {
+//			e.printStackTrace();
+//		}
 		mRequestQueue.add(request);
 	}
 }
