@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Response.Listener;
+import com.kindleassistant.App;
 import com.kindleassistant.AppConstants;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		App.getApp().appinit();
 
 		et_user_url = (EditText) findViewById(R.id.et_user_url);
 		// 设置右上角按钮显示
@@ -180,4 +183,5 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 						}));
 
 	}
+
 }
