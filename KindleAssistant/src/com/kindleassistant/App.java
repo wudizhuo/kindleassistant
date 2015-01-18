@@ -3,9 +3,17 @@ package com.kindleassistant;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.android.volley.Response.Listener;
+import com.kindleassistant.entity.UserCreateApi.UserCreateRqt;
+import com.kindleassistant.entity.UserCreateApi.UserCreateRsp;
 import com.kindleassistant.manager.UpdateMgr;
+import com.kindleassistant.manager.UserInfoMgr;
+import com.kindleassistant.manager.VolleyMgr;
+import com.kindleassistant.net.GsonRequest;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
 import com.umeng.analytics.MobclickAgent;
@@ -20,10 +28,10 @@ public class App extends Application {
 	public void onCreate() {
 		super.onCreate();
 		applicationContext = this.getApplicationContext();
-		app=this;
+		app = this;
 		checkConfig();
 	}
-	
+
 	/**
 	 * 检查应用配置
 	 */
@@ -37,8 +45,11 @@ public class App extends Application {
 		UmengUpdateAgent.setUpdateCheckConfig(BuildConfig.DEBUG);
 		UmengUpdateAgent.setUpdateOnlyWifi(false);
 	}
-	
+
 	public void appinit() {
+		if (TextUtils.isEmpty(UserInfoMgr.getInstance().getUserId())) {
+			userCreate();
+		}
 		UpdateMgr.getInstance().checkUpdate();
 		if (!AppPreferences.getRegisterPush()) {
 			Context context = getApplicationContext();
@@ -58,6 +69,23 @@ public class App extends Application {
 
 		FeedbackAgent agent = new FeedbackAgent(this);
 		agent.sync();
+	}
+
+	private void userCreate() {
+		UserCreateRqt requst = new UserCreateRqt();
+		VolleyMgr.getInstance().sendRequest(
+				new GsonRequest<UserCreateRsp>(AppConstants.USER_CREATE,
+						requst, UserCreateRsp.class,
+						new Listener<UserCreateRsp>() {
+
+							@Override
+							public void onResponse(UserCreateRsp arg0) {
+								if (arg0.getStatus() == 0) {
+									UserInfoMgr.getInstance().saveAppUid(
+											arg0.getAppUid());
+								}
+							}
+						}));
 	}
 
 	public static Context getContext() {
