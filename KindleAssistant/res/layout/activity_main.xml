@@ -8,21 +8,56 @@
     <include layout="@layout/title_bar" />
 
     <EditText
+        android:id="@+id/et_user_url"
         android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:background="#FFFFFF"
-        android:gravity="top" 
-        android:layout_height="150dp" />
-      <Button
-        android:id="@+id/btn_title_left"
+        android:gravity="top" />
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+
+    <Button
+        android:id="@+id/bt_clear"
         style="@style/sendbutton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/but_selector"
-        android:text="发送到我的Kindle" />
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:text="清除内容" />
+
+    <Button
+        android:id="@+id/bt_preview"
+        style="@style/sendbutton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+       
+        android:layout_weight="1"
+        android:background="@drawable/but_selector"
+        android:text="预览内容" />
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/bt_send"
+    style="@style/sendbutton"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/but_selector"
+    android:text="发送到我的Kindle" />
+
 
 </LinearLayout>

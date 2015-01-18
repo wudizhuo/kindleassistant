@@ -24,7 +24,7 @@
             android:id="@+id/tv_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="拼命加载中..."
+            android:text="正在发送中..."
             android:textColor="@android:color/white" />
     </LinearLayout>
 

@@ -36,7 +36,6 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"
         android:background="@drawable/right_btn_selector"
-        android:text="设置"
-        />
+        android:visibility="gone" />
 
 </RelativeLayout>

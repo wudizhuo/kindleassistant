@@ -11,6 +11,21 @@ public class App extends Application {
 	public void onCreate() {
 		super.onCreate();
 		applicationContext = this.getApplicationContext();
+		checkConfig();
+	}
+	
+	/**
+	 * 检查应用配置
+	 */
+	private void checkConfig() {
+		// 友盟的配置
+		// 调试模式
+		MobclickAgent.setDebugMode(BuildConfig.DEBUG);
+		// 使用在线配置功能
+		MobclickAgent.updateOnlineConfig(getContext());
+		// 检查友盟的res是否都复制进去了
+		UmengUpdateAgent.setUpdateCheckConfig(BuildConfig.DEBUG);
+		UmengUpdateAgent.setUpdateOnlyWifi(false);
 	}
 
 	public static Context getContext() {
