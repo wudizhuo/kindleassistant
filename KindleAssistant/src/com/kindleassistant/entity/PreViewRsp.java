@@ -1,17 +1,10 @@
 package com.kindleassistant.entity;
 
-public class PreViewRsp {
-	private int status;
+import com.kindleassistant.common.BaseResponse;
 
-	private String msg;
+public class PreViewRsp extends BaseResponse {
 	private String content;
-	public int getStatus() {
-		return status;
-	}
 
-	public String getMsg() {
-		return msg;
-	}
 	public String getContent() {
 		return content;
 	}
