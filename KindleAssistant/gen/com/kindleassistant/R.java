@@ -161,32 +161,35 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int whats_on_separator=0x7f07000e;
     }
     public static final class dimen {
-        public static final int actionbar_height=0x7f08000c;
-        public static final int actionbar_item_height=0x7f08000d;
-        public static final int actionbar_item_width=0x7f08000e;
+        public static final int actionbar_height=0x7f08000d;
+        public static final int actionbar_item_height=0x7f08000e;
+        public static final int actionbar_item_width=0x7f08000f;
         /**  Default screen margins, per the Android Design guidelines. 
          */
         public static final int activity_horizontal_margin=0x7f080000;
         public static final int activity_vertical_margin=0x7f080001;
-        public static final int body_padding_large=0x7f080004;
+        public static final int body_padding_large=0x7f080005;
         /**  下面是友盟需要的配置 
          */
-        public static final int body_padding_medium=0x7f080003;
+        public static final int body_padding_medium=0x7f080004;
+        /**  一般页边距 
+         */
+        public static final int common_page_edge_padding=0x7f080003;
         /**  分隔线的高度 
          */
         public static final int space_line_h_height=0x7f080002;
-        public static final int speaker_image_padding=0x7f08000a;
-        public static final int speaker_image_size=0x7f080009;
-        public static final int text_size_large=0x7f080007;
-        public static final int text_size_medium=0x7f080006;
-        public static final int text_size_small=0x7f080005;
-        public static final int text_size_xlarge=0x7f080008;
-        public static final int umeng_fb_item_content_size=0x7f080010;
-        public static final int umeng_fb_item_height=0x7f08000f;
-        public static final int umeng_fb_item_line_height=0x7f080012;
-        public static final int umeng_fb_item_time_size=0x7f080011;
-        public static final int umeng_fb_spinner_padding_left=0x7f080013;
-        public static final int vendor_image_size=0x7f08000b;
+        public static final int speaker_image_padding=0x7f08000b;
+        public static final int speaker_image_size=0x7f08000a;
+        public static final int text_size_large=0x7f080008;
+        public static final int text_size_medium=0x7f080007;
+        public static final int text_size_small=0x7f080006;
+        public static final int text_size_xlarge=0x7f080009;
+        public static final int umeng_fb_item_content_size=0x7f080011;
+        public static final int umeng_fb_item_height=0x7f080010;
+        public static final int umeng_fb_item_line_height=0x7f080013;
+        public static final int umeng_fb_item_time_size=0x7f080012;
+        public static final int umeng_fb_spinner_padding_left=0x7f080014;
+        public static final int vendor_image_size=0x7f08000c;
     }
     public static final class drawable {
         public static final int btn_blue=0x7f020000;

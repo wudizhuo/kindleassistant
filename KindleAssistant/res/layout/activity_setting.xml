@@ -20,7 +20,8 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
-            android:gravity="top" />
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp" />
 
         <Spinner
             android:id="@+id/sp_emails"
@@ -41,13 +42,14 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/common_page_edge_padding"
         android:background="@drawable/btn_selector"
         android:text="完成" />
 
     <WebView
         android:id="@+id/web_howset"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/common_page_edge_padding" />
 
 </LinearLayout>
