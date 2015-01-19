@@ -12,7 +12,7 @@ public class ShareExplainActivity extends BaseActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_shareexplain);
 		WebView webview = (WebView) findViewById(R.id.web_howshare);
-		webview.loadUrl("file:///android_asset/kindle.html");  
+		webview.loadUrl("file:///android_asset/howuse.html");  
 		// webview.loadData("file:///android_asset/kindle.html", "text/html; charset=UTF-8", "utf-8");
 	}
 
