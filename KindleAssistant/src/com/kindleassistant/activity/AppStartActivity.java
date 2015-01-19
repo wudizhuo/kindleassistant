@@ -23,13 +23,8 @@ public class AppStartActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);	
 		setContentView(R.layout.appstart);
-		new Handler().postDelayed(new Runnable(){
-			@Override
-			public void run(){
-				Intent intent = new Intent (AppStartActivity.this,MainActivity.class);			
-				startActivity(intent);			
-				AppStartActivity.this.finish();
-			}
-		}, 1000);
+		Intent intent = new Intent (AppStartActivity.this,MainActivity.class);			
+		startActivity(intent);			
+		AppStartActivity.this.finish();
 	}
 }

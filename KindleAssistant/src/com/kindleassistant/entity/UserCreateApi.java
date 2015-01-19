@@ -23,11 +23,6 @@ public class UserCreateApi {
 		public String getApp_uid() {
 			return app_uid;
 		}
-
-		public String getAppUid() {
-			// TODO Auto-generated method stub
-			return null;
-		}
 	}
 
 }

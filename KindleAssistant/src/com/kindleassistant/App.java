@@ -82,7 +82,7 @@ public class App extends Application {
 							public void onResponse(UserCreateRsp arg0) {
 								if (arg0.getStatus() == 0) {
 									UserInfoMgr.getInstance().saveAppUid(
-											arg0.getAppUid());
+											arg0.getApp_uid());
 								}
 							}
 						}));
