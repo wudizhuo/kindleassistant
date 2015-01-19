@@ -36,6 +36,13 @@
     <include layout="@layout/divider_line_h" />
 
     <TextView
+        android:id="@+id/share"
+        style="@style/menu_text"
+        android:text="使用技巧" />
+
+    <include layout="@layout/divider_line_h" />
+
+    <TextView
         android:id="@+id/feedback"
         style="@style/menu_text"
         android:text="意见反馈" />
