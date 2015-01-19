@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.ClipboardManager;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -53,14 +54,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		findViewById(R.id.bt_preview).setOnClickListener(this);
 		this.url = new AppConstants().SEND_URL;
 		this.preview_url = new AppConstants().PREVIEW_URL;
-		// 获取剪切板里面的内容
-		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-
-		// 如果剪切板里面有内容就赋值给textview
-		if (clipboarManager.getText() != null) {
-			this.user_url = clipboarManager.getText().toString();
-			et_user_url.setText(this.user_url);
-		}
+	
 
 		// 获取分享的网址url
 		Intent intent = getIntent();
@@ -73,11 +67,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			if (type.startsWith("text/")) {
 				// 处理获取到的文本，这里我们用TextView显示
 				String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
-				this.user_url = sharedUrl;
-				et_user_url.setText(this.user_url);
+				et_user_url.setText(sharedUrl);
 			}
 		}
 
+	}
+
+	protected void onResume(){
+		super.onResume();
+		
+		// 获取剪切板里面的内容
+		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+
+		// 如果剪切板里面有内容就赋值给textview
+		if (clipboarManager.getText() != null) {
+			et_user_url.setText(clipboarManager.getText().toString());
+		}		
 	}
 
 	private void initRightMenu() {
@@ -121,6 +126,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请您先去设置邮箱", Toast.LENGTH_SHORT);
 				toast.show();
+			} else if (TextUtils.isEmpty(this.user_url)) {
+				Toast toast = Toast.makeText(getApplicationContext(),
+						"请填写文章链接", Toast.LENGTH_SHORT);
+
+				toast.show();
+
 			} else {
 				SendPost();
 			}
@@ -132,7 +143,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			et_user_url.setText("");
 			break;
 		case R.id.bt_preview:
-			if (this.user_url == null) {
+			this.user_url = et_user_url.getText().toString();
+			if (TextUtils.isEmpty(this.user_url)) {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
 
