@@ -11,6 +11,7 @@ import android.widget.LinearLayout.LayoutParams;
 
 import com.kindleassistant.R;
 import com.kindleassistant.activity.SettingActivity;
+import com.kindleassistant.activity.ShareExplainActivity;
 import com.kindleassistant.common.BaseFragment;
 import com.kindleassistant.manager.UpdateMgr;
 import com.kindleassistant.manager.UpdateMgr.UpdateListener;
@@ -38,6 +39,7 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 		view.findViewById(R.id.tv_setting).setOnClickListener(this);
 		view.findViewById(R.id.feedback).setOnClickListener(this);
 		view.findViewById(R.id.check_update).setOnClickListener(this);
+		view.findViewById(R.id.share).setOnClickListener(this);
 		initBtn();
 		return view;
 	}
@@ -80,11 +82,17 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 		case R.id.feedback:
 			settingFeedback();
 			break;
+		case R.id.share:
+			share();
+			break;
 		default:
 			break;
 		}
 	}
-
+	private void share(){
+		startActivity(new Intent(mContext, ShareExplainActivity.class));
+		
+	}
 	private void checkUpdate() {
 		isClickCheckUpdate = true;
 		showProgressDialog("正在检查更新...");
