@@ -10757,6 +10757,34 @@ com.kindleassistant.activity.ShareExplainActivity: ShareExplainActivity()
 com.kindleassistant.common.BaseActivity
 com.kindleassistant.common.BaseActivity: BaseActivity()
 com.kindleassistant.common.BaseActivity: void onBackPressed(android.view.View)
+com.kindleassistant.common.BaseResponse: int status
+com.kindleassistant.common.BaseResponse: java.lang.String msg
+com.kindleassistant.common.BaseResponse: BaseResponse()
+com.kindleassistant.common.BaseResponse: int getStatus()
+com.kindleassistant.common.BaseResponse: java.lang.String getMsg()
+com.kindleassistant.entity.PreView
+com.kindleassistant.entity.PreView: java.lang.String url
+com.kindleassistant.entity.PreView: PreView(java.lang.String)
+com.kindleassistant.entity.PreViewRsp
+com.kindleassistant.entity.PreViewRsp: java.lang.String content
+com.kindleassistant.entity.PreViewRsp: PreViewRsp()
+com.kindleassistant.entity.PreViewRsp: java.lang.String getContent()
+com.kindleassistant.entity.SendUrl
+com.kindleassistant.entity.SendUrl: java.lang.String url
+com.kindleassistant.entity.SendUrl: java.lang.String email
+com.kindleassistant.entity.SendUrl: SendUrl(java.lang.String,java.lang.String)
+com.kindleassistant.entity.SendUrlRsp
+com.kindleassistant.entity.SendUrlRsp: SendUrlRsp()
+com.kindleassistant.entity.UserCreateApi
+com.kindleassistant.entity.UserCreateApi: UserCreateApi()
+com.kindleassistant.entity.UserCreateApi$UserCreateRqt
+com.kindleassistant.entity.UserCreateApi$UserCreateRqt: java.lang.String imei
+com.kindleassistant.entity.UserCreateApi$UserCreateRqt: java.lang.String mac
+com.kindleassistant.entity.UserCreateApi$UserCreateRqt: UserCreateApi$UserCreateRqt()
+com.kindleassistant.entity.UserCreateApi$UserCreateRsp
+com.kindleassistant.entity.UserCreateApi$UserCreateRsp: java.lang.String app_uid
+com.kindleassistant.entity.UserCreateApi$UserCreateRsp: UserCreateApi$UserCreateRsp()
+com.kindleassistant.entity.UserCreateApi$UserCreateRsp: java.lang.String getApp_uid()
 com.qq.jce.wup.ObjectCreateException: ObjectCreateException(java.lang.Exception)
 com.qq.taf.RequestPacket: short iVersion
 com.qq.taf.RequestPacket: byte cPacketType

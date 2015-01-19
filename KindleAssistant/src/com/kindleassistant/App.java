@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.Response.Listener;
 import com.kindleassistant.entity.UserCreateApi.UserCreateRqt;
@@ -14,8 +13,10 @@ import com.kindleassistant.manager.UpdateMgr;
 import com.kindleassistant.manager.UserInfoMgr;
 import com.kindleassistant.manager.VolleyMgr;
 import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.utils.ChannelUtil;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
+import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -47,6 +48,7 @@ public class App extends Application {
 	}
 
 	public void appinit() {
+		AnalyticsConfig.setChannel(ChannelUtil.getUmengChannal(this));
 		if (TextUtils.isEmpty(UserInfoMgr.getInstance().getUserId())) {
 			userCreate();
 		}
