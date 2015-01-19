@@ -1,15 +1,7 @@
 package com.kindleassistant.entity;
 
-public class SendUrlRsp {
-	private int status;
-	private String msg;
+import com.kindleassistant.common.BaseResponse;
 
-	public int getStatus() {
-		return status;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
+public class SendUrlRsp extends BaseResponse {
 
 }

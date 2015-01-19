@@ -1,20 +1,21 @@
 package com.kindleassistant.manager;
 
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+
 import com.kindleassistant.App;
-import com.umeng.update.UmengUpdateAgent;
-import com.umeng.update.UmengUpdateListener;
-import com.umeng.update.UpdateResponse;
-import com.umeng.update.UpdateStatus;
+import com.kindleassistant.AppPreferences;
 
 /**
- * 升级管理器
- * 
  * @author SunZhuo
  * 
  */
 public class UserInfoMgr {
 	private static UserInfoMgr mInstance = null;
 	protected boolean hasNewVersion;
+	private String appUid;
 
 	private UserInfoMgr() {
 	}
@@ -32,7 +33,26 @@ public class UserInfoMgr {
 	}
 
 	public String getUserId() {
-		return 1 + "";
+		if (TextUtils.isEmpty(appUid)) {
+			appUid = AppPreferences.getAppUid();
+		}
+		return appUid;
 	}
 
+	public String getImei() {
+		String deviceId = ((TelephonyManager) App.getContext()
+				.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+		return deviceId;
+	}
+
+	public String getMac() {
+		WifiManager wm = (WifiManager) App.getContext().getSystemService(
+				Context.WIFI_SERVICE);
+		return wm.getConnectionInfo().getMacAddress();
+	}
+
+	public void saveAppUid(String appUid) {
+		this.appUid = appUid;
+		AppPreferences.saveAppUid(appUid);
+	}
 }
