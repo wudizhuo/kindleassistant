@@ -54,7 +54,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		findViewById(R.id.bt_preview).setOnClickListener(this);
 		this.url = new AppConstants().SEND_URL;
 		this.preview_url = new AppConstants().PREVIEW_URL;
-	
 
 		// 获取分享的网址url
 		Intent intent = getIntent();
@@ -73,25 +72,24 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	}
 
-	protected void onResume(){
+	protected void onResume() {
 		super.onResume();
-		
+
 		// 获取剪切板里面的内容
 		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
 		// 如果剪切板里面有内容就赋值给textview
 		if (clipboarManager.getText() != null) {
 			et_user_url.setText(clipboarManager.getText().toString());
-		}		
+		}
 	}
 
 	private void initRightMenu() {
 		Button btn_title_left = (Button) findViewById(R.id.btn_title_left);
 		btn_title_left.setVisibility(View.INVISIBLE);
-		View btn_title_right = findViewById(R.id.btn_title_right);
+		Button btn_title_right = (Button) findViewById(R.id.btn_title_right);
 		btn_title_right.setVisibility(View.VISIBLE);
-		btn_title_right
-				.setBackgroundResource(R.drawable.content_right_btn_selector);
+		btn_title_right.setText("菜单");
 
 		slidingmenu = new SlidingMenu(this);
 		slidingmenu.setMode(SlidingMenu.RIGHT);

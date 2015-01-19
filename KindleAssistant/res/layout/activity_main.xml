@@ -25,7 +25,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/but_selector"
+        android:background="@drawable/btn_selector"
         android:layout_weight="1"
         android:layout_centerVertical="true"
         android:text="清除内容" />
@@ -41,7 +41,7 @@
         android:layout_centerVertical="true"
        
         android:layout_weight="1"
-        android:background="@drawable/but_selector"
+        android:background="@drawable/btn_selector"
         android:text="预览内容" />
 
 </LinearLayout>
@@ -56,7 +56,7 @@
     android:layout_marginLeft="4dp"
     android:layout_marginRight="4dp"
     android:layout_marginTop="20dp"
-    android:background="@drawable/but_selector"
+    android:background="@drawable/btn_selector"
     android:text="发送到我的Kindle" />
 
 
