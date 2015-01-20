@@ -43,6 +43,13 @@
     <include layout="@layout/divider_line_h" />
 
     <TextView
+        android:id="@+id/about"
+        style="@style/menu_text"
+        android:text="关于" />
+
+    <include layout="@layout/divider_line_h" />
+
+    <TextView
         android:id="@+id/feedback"
         style="@style/menu_text"
         android:text="意见反馈" />

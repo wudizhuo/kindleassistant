@@ -10298,7 +10298,8 @@ com.kindleassistant.AppPreferences -> com.kindleassistant.d:
     android.content.SharedPreferences sPreferences -> b
     java.lang.String IS_REGISTERPUSH -> h
     java.lang.String HAS_SLIDINGGUIDE -> i
-    java.lang.String APPUID -> j
+    java.lang.String USER_EMAIL -> j
+    java.lang.String APPUID -> k
     byte[] generateKey(int) -> a
     byte[] generateIV(int) -> b
     java.lang.String secureValue(java.lang.String) -> a
@@ -10309,19 +10310,21 @@ com.kindleassistant.AppPreferences -> com.kindleassistant.d:
     boolean setRegisterPush(boolean) -> b
     java.lang.String getAppUid() -> c
     boolean saveAppUid(java.lang.String) -> c
+    java.lang.String getEmail() -> d
+    boolean setEmail(java.lang.String) -> d
 com.kindleassistant.BuildConfig -> com.kindleassistant.e:
     boolean DEBUG -> a
-com.kindleassistant.R -> com.kindleassistant.f:
-com.kindleassistant.R$anim -> com.kindleassistant.g:
+com.kindleassistant.R -> com.kindleassistant.R:
+com.kindleassistant.R$anim -> com.kindleassistant.R$anim:
     int slide_in_left -> slide_in_left
     int slide_in_right -> slide_in_right
     int slide_out_left -> slide_out_left
     int slide_out_right -> slide_out_right
-com.kindleassistant.R$array -> com.kindleassistant.h:
+com.kindleassistant.R$array -> com.kindleassistant.R$array:
     int sp_emails -> sp_emails
     int umeng_fb_contact_key_array -> umeng_fb_contact_key_array
     int umeng_fb_contact_type_array -> umeng_fb_contact_type_array
-com.kindleassistant.R$attr -> com.kindleassistant.i:
+com.kindleassistant.R$attr -> com.kindleassistant.R$attr:
     int behindOffset -> behindOffset
     int behindScrollScale -> behindScrollScale
     int behindWidth -> behindWidth
@@ -10336,7 +10339,7 @@ com.kindleassistant.R$attr -> com.kindleassistant.i:
     int touchModeBehind -> touchModeBehind
     int viewAbove -> viewAbove
     int viewBehind -> viewBehind
-com.kindleassistant.R$color -> com.kindleassistant.j:
+com.kindleassistant.R$color -> com.kindleassistant.R$color:
     int accent_1 -> accent_1
     int all_track_color -> all_track_color
     int background_1 -> background_1
@@ -10361,7 +10364,7 @@ com.kindleassistant.R$color -> com.kindleassistant.j:
     int umeng_fb_secondary_text_light -> umeng_fb_secondary_text_light
     int umeng_fb_white -> umeng_fb_white
     int whats_on_separator -> whats_on_separator
-com.kindleassistant.R$dimen -> com.kindleassistant.k:
+com.kindleassistant.R$dimen -> com.kindleassistant.R$dimen:
     int actionbar_height -> actionbar_height
     int actionbar_item_height -> actionbar_item_height
     int actionbar_item_width -> actionbar_item_width
@@ -10383,7 +10386,7 @@ com.kindleassistant.R$dimen -> com.kindleassistant.k:
     int umeng_fb_item_time_size -> umeng_fb_item_time_size
     int umeng_fb_spinner_padding_left -> umeng_fb_spinner_padding_left
     int vendor_image_size -> vendor_image_size
-com.kindleassistant.R$drawable -> com.kindleassistant.l:
+com.kindleassistant.R$drawable -> com.kindleassistant.R$drawable:
     int btn_blue -> btn_blue
     int btn_blue_press -> btn_blue_press
     int btn_nomal -> btn_nomal
@@ -10429,7 +10432,8 @@ com.kindleassistant.R$drawable -> com.kindleassistant.l:
     int umeng_update_wifi_disable -> umeng_update_wifi_disable
     int umeng_xp -> umeng_xp
     int welcome -> welcome
-com.kindleassistant.R$id -> com.kindleassistant.m:
+com.kindleassistant.R$id -> com.kindleassistant.R$id:
+    int about -> about
     int bt_clear -> bt_clear
     int bt_preview -> bt_preview
     int bt_save_useremail -> bt_save_useremail
@@ -10443,6 +10447,7 @@ com.kindleassistant.R$id -> com.kindleassistant.m:
     int feedback -> feedback
     int fragment_slidingright -> fragment_slidingright
     int fullscreen -> fullscreen
+    int iv_icon -> iv_icon
     int left -> left
     int margin -> margin
     int progress_bar -> progress_bar
@@ -10452,6 +10457,9 @@ com.kindleassistant.R$id -> com.kindleassistant.m:
     int slidingmenu_right -> slidingmenu_right
     int slidingmenumain -> slidingmenumain
     int sp_emails -> sp_emails
+    int title_bar -> title_bar
+    int tv_about_ver -> tv_about_ver
+    int tv_author -> tv_author
     int tv_msg -> tv_msg
     int tv_setting -> tv_setting
     int tv_titlebar_midtv -> tv_titlebar_midtv
@@ -10494,7 +10502,8 @@ com.kindleassistant.R$id -> com.kindleassistant.m:
     int ut_loadpic -> ut_loadpic
     int web_howset -> web_howset
     int web_howshare -> web_howshare
-com.kindleassistant.R$layout -> com.kindleassistant.n:
+com.kindleassistant.R$layout -> com.kindleassistant.R$layout:
+    int activity_about -> activity_about
     int activity_main -> activity_main
     int activity_preview -> activity_preview
     int activity_setting -> activity_setting
@@ -10517,7 +10526,7 @@ com.kindleassistant.R$layout -> com.kindleassistant.n:
     int umeng_update_dialog -> umeng_update_dialog
     int umeng_ut_loadpic -> umeng_ut_loadpic
     int view_progress_indeterminate -> view_progress_indeterminate
-com.kindleassistant.R$string -> com.kindleassistant.o:
+com.kindleassistant.R$string -> com.kindleassistant.R$string:
     int UMAppUpdate -> UMAppUpdate
     int UMBreak_Network -> UMBreak_Network
     int UMDialog_InstallAPK -> UMDialog_InstallAPK
@@ -10597,7 +10606,7 @@ com.kindleassistant.R$string -> com.kindleassistant.o:
     int umeng_fb_time_this_year_format -> umeng_fb_time_this_year_format
     int umeng_fb_title -> umeng_fb_title
     int umeng_fb_write_contact_title -> umeng_fb_write_contact_title
-com.kindleassistant.R$style -> com.kindleassistant.p:
+com.kindleassistant.R$style -> com.kindleassistant.R$style:
     int AnimationActivity -> AnimationActivity
     int AppTheme -> AppTheme
     int ButtonStyle -> ButtonStyle
@@ -10611,7 +10620,7 @@ com.kindleassistant.R$style -> com.kindleassistant.p:
     int titleBar -> titleBar
     int title_text -> title_text
     int wrap -> wrap
-com.kindleassistant.R$styleable -> com.kindleassistant.q:
+com.kindleassistant.R$styleable -> com.kindleassistant.R$styleable:
     int[] SlidingMenu -> SlidingMenu
     int SlidingMenu_behindOffset -> SlidingMenu_behindOffset
     int SlidingMenu_behindScrollScale -> SlidingMenu_behindScrollScale
@@ -10627,8 +10636,9 @@ com.kindleassistant.R$styleable -> com.kindleassistant.q:
     int SlidingMenu_touchModeBehind -> SlidingMenu_touchModeBehind
     int SlidingMenu_viewAbove -> SlidingMenu_viewAbove
     int SlidingMenu_viewBehind -> SlidingMenu_viewBehind
+com.kindleassistant.activity.AboutActivity -> com.kindleassistant.activity.AboutActivity:
+    void onCreate(android.os.Bundle) -> onCreate
 com.kindleassistant.activity.AppStartActivity -> com.kindleassistant.activity.AppStartActivity:
-    void main(java.lang.String[]) -> a
     void onCreate(android.os.Bundle) -> onCreate
 com.kindleassistant.activity.MainActivity -> com.kindleassistant.activity.MainActivity:
     java.lang.String url -> b
@@ -10650,9 +10660,12 @@ com.kindleassistant.activity.MainActivity$1 -> com.kindleassistant.activity.a:
     void onOpened() -> a
 com.kindleassistant.activity.MainActivity$2 -> com.kindleassistant.activity.b:
     com.kindleassistant.activity.MainActivity this$0 -> a
+    void run() -> run
+com.kindleassistant.activity.MainActivity$3 -> com.kindleassistant.activity.c:
+    com.kindleassistant.activity.MainActivity this$0 -> a
     void onResponse(com.kindleassistant.entity.SendUrlRsp) -> a
     void onResponse(java.lang.Object) -> a
-com.kindleassistant.activity.MainActivity$3 -> com.kindleassistant.activity.c:
+com.kindleassistant.activity.MainActivity$4 -> com.kindleassistant.activity.d:
     com.kindleassistant.activity.MainActivity this$0 -> a
     void onResponse(com.kindleassistant.entity.PreViewRsp) -> a
     void onResponse(java.lang.Object) -> a
@@ -10663,14 +10676,18 @@ com.kindleassistant.activity.PreviewActivity -> com.kindleassistant.activity.Pre
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
     void SendPost() -> a
-com.kindleassistant.activity.PreviewActivity$1 -> com.kindleassistant.activity.d:
+com.kindleassistant.activity.PreviewActivity$1 -> com.kindleassistant.activity.e:
+    com.kindleassistant.activity.PreviewActivity this$0 -> a
+    void run() -> run
+com.kindleassistant.activity.PreviewActivity$2 -> com.kindleassistant.activity.f:
     com.kindleassistant.activity.PreviewActivity this$0 -> a
     void onResponse(com.kindleassistant.entity.SendUrlRsp) -> a
     void onResponse(java.lang.Object) -> a
 com.kindleassistant.activity.SettingActivity -> com.kindleassistant.activity.SettingActivity:
+    android.widget.Spinner sp_emails -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
-com.kindleassistant.activity.SettingActivity$1 -> com.kindleassistant.activity.e:
+com.kindleassistant.activity.SettingActivity$1 -> com.kindleassistant.activity.g:
     com.kindleassistant.activity.SettingActivity this$0 -> a
     void run() -> run
 com.kindleassistant.activity.ShareExplainActivity -> com.kindleassistant.activity.ShareExplainActivity:
@@ -10682,6 +10699,7 @@ com.kindleassistant.common.BaseActivity -> com.kindleassistant.common.BaseActivi
     void onResume() -> onResume
     void onPause() -> onPause
     void showProgressDialog(java.lang.String) -> a
+    void setTitleText(java.lang.String) -> b
     void showProgressDialog() -> c
     void dismissProgressDialog() -> d
     void onBackPressed(android.view.View) -> onBackPressed
@@ -10788,16 +10806,19 @@ com.kindleassistant.utils.Base64 -> com.kindleassistant.d.a:
     byte[] encode(byte[]) -> a
     byte[] decode(byte[]) -> b
     byte[] decode(java.lang.String) -> a
-com.kindleassistant.utils.LogUtil -> com.kindleassistant.d.b:
+com.kindleassistant.utils.ChannelUtil -> com.kindleassistant.d.b:
+    java.lang.String getUmengChannal(android.content.Context) -> a
+    java.lang.String getMETAINF(android.content.Context,java.lang.String) -> a
+com.kindleassistant.utils.LogUtil -> com.kindleassistant.d.c:
     boolean DEBUG -> a
     void i(java.lang.String,java.lang.String) -> a
     void s(java.lang.String) -> a
-com.kindleassistant.utils.StatServiceUtil -> com.kindleassistant.d.c:
+com.kindleassistant.utils.StatServiceUtil -> com.kindleassistant.d.d:
     java.util.Properties prop -> a
     void trackEvent(java.lang.String) -> a
     void trackBeginEvent(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
     void trackEndEvent(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> b
-com.kindleassistant.utils.ToastUtil -> com.kindleassistant.d.d:
+com.kindleassistant.utils.ToastUtil -> com.kindleassistant.d.e:
     void show(java.lang.CharSequence) -> a
     void show(int) -> a
     void showInCenter(java.lang.CharSequence) -> b

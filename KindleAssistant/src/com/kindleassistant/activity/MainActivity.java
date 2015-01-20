@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnOpenedListener;
 import com.kindleassistant.App;
 import com.kindleassistant.AppConstants;
+import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
 import com.kindleassistant.entity.PreView;
@@ -52,8 +54,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		findViewById(R.id.btn_title_right).setOnClickListener(this);
 		findViewById(R.id.bt_clear).setOnClickListener(this);
 		findViewById(R.id.bt_preview).setOnClickListener(this);
-		this.url = new AppConstants().SEND_URL;
-		this.preview_url = new AppConstants().PREVIEW_URL;
+		this.url = AppConstants.SEND_URL;
+		this.preview_url = AppConstants.PREVIEW_URL;
 
 		// 获取分享的网址url
 		Intent intent = getIntent();
@@ -117,20 +119,28 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.bt_send:
 			this.user_url = et_user_url.getText().toString();
-			SharedPreferences sharedPreferences = getSharedPreferences(
-					"user_email", this.MODE_PRIVATE);
-			this.user_email = sharedPreferences.getString("email", "");
+			this.user_email = AppPreferences.getEmail();
 			if (this.user_email == null || this.user_email.length() <= 0) {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请您先去设置邮箱", Toast.LENGTH_SHORT);
 				toast.show();
+				StatServiceUtil.trackEvent("未设置邮箱前发送点击");
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run(){
+						Intent intent = new Intent ( MainActivity.this,SettingActivity.class);			
+						startActivity(intent);	
+					}
+				}, 300);
 			} else if (TextUtils.isEmpty(this.user_url)) {
+				StatServiceUtil.trackEvent("未填写url前发送点击");
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
 
 				toast.show();
 
 			} else {
+				StatServiceUtil.trackEvent("设置邮箱后发送按钮点击");
 				SendPost();
 			}
 			break;
@@ -145,10 +155,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			if (TextUtils.isEmpty(this.user_url)) {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
-
+				StatServiceUtil.trackEvent("未填写url前预览点击");
 				toast.show();
 
 			} else {
+				StatServiceUtil.trackEvent("预览点击");
 				PreView();
 			}
 			break;
@@ -174,12 +185,14 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									Toast toast = Toast.makeText(
 											getApplicationContext(), "发送成功",
 											Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送成功");
 
 									toast.show();
 								} else {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送失败--" + arg0.getMsg());
 									toast.show();
 
 								}
@@ -211,10 +224,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									intent1.putExtra("user_url",
 											MainActivity.this.user_url);
 									startActivity(intent1);
+									StatServiceUtil.trackEvent("预览成功");
 								} else {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("预览失败--" + arg0.getMsg());
 									toast.show();
 
 								}

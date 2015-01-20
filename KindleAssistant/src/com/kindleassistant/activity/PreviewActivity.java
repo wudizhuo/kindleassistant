@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.android.volley.Response.Listener;
 import com.kindleassistant.AppConstants;
+import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.R.string;
 import com.kindleassistant.common.BaseActivity;
@@ -24,6 +25,7 @@ import com.kindleassistant.entity.SendUrl;
 import com.kindleassistant.entity.SendUrlRsp;
 import com.kindleassistant.manager.VolleyMgr;
 import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.utils.StatServiceUtil;
 
 public class PreviewActivity extends BaseActivity implements OnClickListener{
 	private String user_url;
@@ -59,13 +61,19 @@ public class PreviewActivity extends BaseActivity implements OnClickListener{
 		switch (v.getId()) {
 		case R.id.btn_title_right:
 		
-			SharedPreferences sharedPreferences = getSharedPreferences(
-					"user_email", this.MODE_PRIVATE);
-			this.user_email = sharedPreferences.getString("email", "");
+			this.user_email = AppPreferences.getEmail();
 			if (this.user_email == null || this.user_email.length() <= 0) {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请您先去设置邮箱", Toast.LENGTH_SHORT);
 				toast.show();
+				StatServiceUtil.trackEvent("未设置邮箱前发送点击");
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run(){
+						Intent intent = new Intent (PreviewActivity.this,SettingActivity.class);			
+						startActivity(intent);	
+					}
+				}, 300);
 			} else {
 				SendPost();
 			}

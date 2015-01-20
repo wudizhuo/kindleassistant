@@ -186,7 +186,7 @@
    public <init>(org.json.JSONObject);
 }
 
--keep public class com.bxj.R$*{
+-keep public class com.kindleassistant.R$*{
 	public static final int *;
 }
 

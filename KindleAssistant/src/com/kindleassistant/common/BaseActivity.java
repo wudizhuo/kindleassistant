@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
 
+import com.kindleassistant.R;
 import com.kindleassistant.view.CustomerProgressDialog;
+import com.umeng.analytics.MobclickAgent;
 
 public abstract class BaseActivity extends FragmentActivity {
 
@@ -20,10 +23,12 @@ public abstract class BaseActivity extends FragmentActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
+		MobclickAgent.onPause(this);
 		super.onPause();
 	}
 
@@ -42,6 +47,11 @@ public abstract class BaseActivity extends FragmentActivity {
 			progressDialog.show();
 			progressOnShow = true;
 		}
+	}
+	
+	public void setTitleText(String text) {
+		TextView tv_titlebar_midtv = (TextView) findViewById(R.id.tv_titlebar_midtv);
+		tv_titlebar_midtv.setText(text);
 	}
 
 	/**

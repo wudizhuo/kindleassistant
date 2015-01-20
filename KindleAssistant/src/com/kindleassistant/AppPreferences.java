@@ -38,6 +38,7 @@ public class AppPreferences {
 
 	private static final String IS_REGISTERPUSH = "is_registerpush";
 	private static final String HAS_SLIDINGGUIDE = "has_slidingguide";
+	private static final String USER_EMAIL = "user_email";
 	private static final String APPUID = "AppUid";
 
 	protected static byte[] generateKey(int len) {
@@ -183,6 +184,14 @@ public class AppPreferences {
 	public static boolean saveAppUid(String value) {
 		return sPreferences.edit().putString(APPUID, secureValue(value))
 				.commit();
+	}
+	
+	public static String getEmail() {
+		return sPreferences.getString(USER_EMAIL, "");
+	}
+
+	public static boolean setEmail(String value) {
+		return sPreferences.edit().putString(USER_EMAIL, value).commit();
 	}
 
 }
