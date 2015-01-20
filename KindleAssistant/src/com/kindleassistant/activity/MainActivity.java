@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.view.View;
@@ -124,13 +125,23 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请您先去设置邮箱", Toast.LENGTH_SHORT);
 				toast.show();
+				StatServiceUtil.trackEvent("未设置邮箱前发送点击");
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run(){
+						Intent intent = new Intent ( MainActivity.this,SettingActivity.class);			
+						startActivity(intent);	
+					}
+				}, 800);
 			} else if (TextUtils.isEmpty(this.user_url)) {
+				StatServiceUtil.trackEvent("未填写url前发送点击");
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
 
 				toast.show();
 
 			} else {
+				StatServiceUtil.trackEvent("设置邮箱后发送按钮点击");
 				SendPost();
 			}
 			break;
@@ -145,10 +156,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			if (TextUtils.isEmpty(this.user_url)) {
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
-
+				StatServiceUtil.trackEvent("未填写url前预览点击");
 				toast.show();
 
 			} else {
+				StatServiceUtil.trackEvent("预览点击");
 				PreView();
 			}
 			break;
@@ -174,12 +186,14 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									Toast toast = Toast.makeText(
 											getApplicationContext(), "发送成功",
 											Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送成功");
 
 									toast.show();
 								} else {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送失败--" + arg0.getMsg());
 									toast.show();
 
 								}
@@ -211,10 +225,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									intent1.putExtra("user_url",
 											MainActivity.this.user_url);
 									startActivity(intent1);
+									StatServiceUtil.trackEvent("预览成功");
 								} else {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("预览失败--" + arg0.getMsg());
 									toast.show();
 
 								}
