@@ -34,11 +34,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	private String url;
 	private String preview_url;
 	private String user_url;
-	private String shared_url;
 	private String user_email;
 	private EditText et_user_url;
 	public static String RIGHT_FRAGMENT = "slidingmenu_right";
 	private SlidingMenu slidingmenu;
+	private boolean isShared;
 
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -48,7 +48,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		App.getApp().appinit();
 
 		initRightMenu();
-
 		et_user_url = (EditText) findViewById(R.id.et_user_url);
 		// 监听点击事件
 		findViewById(R.id.bt_send).setOnClickListener(this);
@@ -58,34 +57,41 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		this.url = AppConstants.SEND_URL;
 		this.preview_url = AppConstants.PREVIEW_URL;
 
+	}
+
+	protected void onResume() {
+		super.onResume();
+		getSendUrl();
+	}
+
+	public void getSendUrl() {
+		
 		// 获取分享的网址url
 		Intent intent = getIntent();
 		// 获得Intent的Action
 		String action = intent.getAction();
 		// 获得Intent的MIME type
 		String type = intent.getType();
-		if (Intent.ACTION_SEND.equals(action) && type != null) {
+		if (Intent.ACTION_SEND.equals(action) && type != null && !isShared) {
 			// 我们这里处理所有的文本类型
 			if (type.startsWith("text/")) {
 				// 处理获取到的文本，这里我们用TextView显示
 				String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
-				this.shared_url = sharedUrl;
 				et_user_url.setText(sharedUrl);
 			}
-		}
-
-	}
-
-	protected void onResume() {
-		super.onResume();
-	
+			isShared = true;
+		} 
+		
 		// 获取剪切板里面的内容
 		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
 		// 如果剪切板里面有内容就赋值给textview
-		if (clipboarManager.getText() != null && TextUtils.isEmpty(shared_url)) {
+		if (clipboarManager.getText() != null && !isShared) {
 			et_user_url.setText(clipboarManager.getText().toString());
+			isShared = false;
 		}
+
+
 	}
 
 	private void initRightMenu() {
@@ -127,11 +133,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 						"请您先去设置邮箱", Toast.LENGTH_SHORT);
 				toast.show();
 				StatServiceUtil.trackEvent("未设置邮箱前发送点击");
-				new Handler().postDelayed(new Runnable(){
+				new Handler().postDelayed(new Runnable() {
 					@Override
-					public void run(){
-						Intent intent = new Intent ( MainActivity.this,SettingActivity.class);			
-						startActivity(intent);	
+					public void run() {
+						Intent intent = new Intent(MainActivity.this,
+								SettingActivity.class);
+						startActivity(intent);
 					}
 				}, 300);
 			} else if (TextUtils.isEmpty(this.user_url)) {
@@ -194,7 +201,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
-									StatServiceUtil.trackEvent("发送按钮-发送失败--" + arg0.getMsg());
+									StatServiceUtil.trackEvent("发送按钮-发送失败--"
+											+ arg0.getMsg());
 									toast.show();
 
 								}
@@ -231,7 +239,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 									Toast toast = Toast.makeText(
 											getApplicationContext(),
 											arg0.getMsg(), Toast.LENGTH_SHORT);
-									StatServiceUtil.trackEvent("预览失败--" + arg0.getMsg());
+									StatServiceUtil.trackEvent("预览失败--"
+											+ arg0.getMsg());
 									toast.show();
 
 								}
