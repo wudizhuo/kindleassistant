@@ -8,50 +8,675 @@
 package com.kindleassistant;
 
 public final class R {
+    public static final class anim {
+        public static final int slide_in_left=0x7f040000;
+        public static final int slide_in_right=0x7f040001;
+        public static final int slide_out_left=0x7f040002;
+        public static final int slide_out_right=0x7f040003;
+    }
+    public static final class array {
+        public static final int sp_emails=0x7f060000;
+        public static final int umeng_fb_contact_key_array=0x7f060002;
+        public static final int umeng_fb_contact_type_array=0x7f060001;
+    }
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindOffset=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindScrollScale=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindWidth=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeDegree=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeEnabled=0x7f01000a;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int mode=0x7f010000;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int selectorDrawable=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectorEnabled=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadowDrawable=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowWidth=0x7f010009;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeAbove=0x7f010006;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeBehind=0x7f010007;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewAbove=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewBehind=0x7f010002;
     }
     public static final class color {
-        public static final int content_bg=0x7f040000;
-        public static final int menu_bg=0x7f040001;
-        public static final int page_bg=0x7f040003;
-        public static final int text_color=0x7f040004;
-        public static final int title_bar_bg=0x7f040002;
+        public static final int accent_1=0x7f07000b;
+        public static final int all_track_color=0x7f07000f;
+        public static final int background_1=0x7f07000d;
+        public static final int block_column_1=0x7f070010;
+        public static final int block_column_2=0x7f070011;
+        public static final int block_column_3=0x7f070012;
+        public static final int body_text_1=0x7f070006;
+        public static final int body_text_1_inverse=0x7f070009;
+        public static final int body_text_2=0x7f070007;
+        public static final int body_text_2_inverse=0x7f07000a;
+        public static final int body_text_disabled=0x7f070008;
+        public static final int content_bg=0x7f070000;
+        public static final int hyperlink=0x7f07000c;
+        public static final int menu_bg=0x7f070001;
+        public static final int page_bg=0x7f070003;
+        public static final int text_color=0x7f070004;
+        /**  下面是友盟需要的配置 
+         */
+        public static final int text_menu_press=0x7f070005;
+        public static final int title_bar_bg=0x7f070002;
+        public static final int umeng_fb_gray=0x7f070014;
+        public static final int umeng_fb_lightblue=0x7f070013;
+        public static final int umeng_fb_line=0x7f070015;
+        public static final int umeng_fb_secondary_text_light=0x7f070016;
+        public static final int umeng_fb_white=0x7f070017;
+        public static final int whats_on_separator=0x7f07000e;
+    }
+    public static final class dimen {
+        public static final int actionbar_height=0x7f08000d;
+        public static final int actionbar_item_height=0x7f08000e;
+        public static final int actionbar_item_width=0x7f08000f;
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
+        public static final int body_padding_large=0x7f080005;
+        /**  下面是友盟需要的配置 
+         */
+        public static final int body_padding_medium=0x7f080004;
+        /**  一般页边距 
+         */
+        public static final int common_page_edge_padding=0x7f080003;
+        /**  分隔线的高度 
+         */
+        public static final int space_line_h_height=0x7f080002;
+        public static final int speaker_image_padding=0x7f08000b;
+        public static final int speaker_image_size=0x7f08000a;
+        public static final int text_size_large=0x7f080008;
+        public static final int text_size_medium=0x7f080007;
+        public static final int text_size_small=0x7f080006;
+        public static final int text_size_xlarge=0x7f080009;
+        public static final int umeng_fb_item_content_size=0x7f080011;
+        public static final int umeng_fb_item_height=0x7f080010;
+        public static final int umeng_fb_item_line_height=0x7f080013;
+        public static final int umeng_fb_item_time_size=0x7f080012;
+        public static final int umeng_fb_spinner_padding_left=0x7f080014;
+        public static final int vendor_image_size=0x7f08000c;
     }
     public static final class drawable {
         public static final int btn_blue=0x7f020000;
         public static final int btn_blue_press=0x7f020001;
-        public static final int but_selector=0x7f020002;
+        public static final int btn_nomal=0x7f02002c;
+        public static final int btn_pressed=0x7f02002b;
+        public static final int btn_selector=0x7f020002;
         public static final int dialog_window_bg=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int loading=0x7f020005;
-        public static final int progress_bg=0x7f020006;
-        public static final int progress_loading=0x7f020007;
-        public static final int right_btn_selector=0x7f020008;
-        public static final int send_but_nomal=0x7f02000b;
-        public static final int send_but_pressed=0x7f02000a;
-        public static final int welcome=0x7f020009;
+        public static final int divider_line=0x7f020004;
+        public static final int icon=0x7f020005;
+        public static final int loading=0x7f020006;
+        public static final int progress_bg=0x7f020007;
+        public static final int progress_loading=0x7f020008;
+        public static final int right_btn_selector=0x7f020009;
+        public static final int tab_unread_bg=0x7f02000a;
+        public static final int text_menu_selector=0x7f02000b;
+        public static final int umeng_analytics=0x7f02000c;
+        public static final int umeng_common_gradient_green=0x7f02000d;
+        public static final int umeng_common_gradient_orange=0x7f02000e;
+        public static final int umeng_common_gradient_red=0x7f02000f;
+        public static final int umeng_fb_action_replay=0x7f020010;
+        public static final int umeng_fb_arrow_right=0x7f020011;
+        public static final int umeng_strock_bg_1=0x7f020012;
+        public static final int umeng_tools=0x7f020013;
+        public static final int umeng_update_btn_check_off_focused_holo_light=0x7f020014;
+        public static final int umeng_update_btn_check_off_holo_light=0x7f020015;
+        public static final int umeng_update_btn_check_off_pressed_holo_light=0x7f020016;
+        public static final int umeng_update_btn_check_on_focused_holo_light=0x7f020017;
+        public static final int umeng_update_btn_check_on_holo_light=0x7f020018;
+        public static final int umeng_update_btn_check_on_pressed_holo_light=0x7f020019;
+        public static final int umeng_update_button_cancel_bg_focused=0x7f02001a;
+        public static final int umeng_update_button_cancel_bg_normal=0x7f02001b;
+        public static final int umeng_update_button_cancel_bg_selector=0x7f02001c;
+        public static final int umeng_update_button_cancel_bg_tap=0x7f02001d;
+        public static final int umeng_update_button_check_selector=0x7f02001e;
+        public static final int umeng_update_button_close_bg_selector=0x7f02001f;
+        public static final int umeng_update_button_ok_bg_focused=0x7f020020;
+        public static final int umeng_update_button_ok_bg_normal=0x7f020021;
+        public static final int umeng_update_button_ok_bg_selector=0x7f020022;
+        public static final int umeng_update_button_ok_bg_tap=0x7f020023;
+        public static final int umeng_update_close_bg_normal=0x7f020024;
+        public static final int umeng_update_close_bg_tap=0x7f020025;
+        public static final int umeng_update_dialog_bg=0x7f020026;
+        public static final int umeng_update_title_bg=0x7f020027;
+        public static final int umeng_update_wifi_disable=0x7f020028;
+        public static final int umeng_xp=0x7f020029;
+        public static final int welcome=0x7f02002a;
     }
     public static final class id {
-        public static final int btn_title_left=0x7f070000;
-        public static final int btn_title_right=0x7f070002;
-        public static final int progress_bar=0x7f070003;
-        public static final int tv_msg=0x7f070004;
-        public static final int tv_titlebar_midtv=0x7f070001;
+        public static final int about=0x7f050018;
+        public static final int bt_clear=0x7f05000a;
+        public static final int bt_preview=0x7f05000b;
+        public static final int bt_save_useremail=0x7f050010;
+        public static final int bt_send=0x7f05000c;
+        public static final int btn_title_left=0x7f05001c;
+        public static final int btn_title_right=0x7f05001e;
+        public static final int check_update=0x7f050015;
+        public static final int et_content=0x7f05000d;
+        public static final int et_user_email=0x7f05000e;
+        public static final int et_user_url=0x7f050009;
+        public static final int feedback=0x7f050019;
+        public static final int fragment_slidingright=0x7f050013;
+        public static final int fullscreen=0x7f050003;
+        public static final int iv_icon=0x7f050006;
+        public static final int left=0x7f050001;
+        public static final int margin=0x7f050004;
+        public static final int progress_bar=0x7f050043;
+        public static final int right=0x7f050002;
+        public static final int selected_view=0x7f050000;
+        public static final int share=0x7f050017;
+        public static final int slidingmenu_right=0x7f05001a;
+        public static final int slidingmenumain=0x7f05001b;
+        public static final int sp_emails=0x7f05000f;
+        public static final int title_bar=0x7f050005;
+        public static final int tv_about_ver=0x7f050007;
+        public static final int tv_author=0x7f050008;
+        public static final int tv_msg=0x7f050044;
+        public static final int tv_setting=0x7f050014;
+        public static final int tv_titlebar_midtv=0x7f05001d;
+        public static final int umeng_common_icon_view=0x7f05001f;
+        public static final int umeng_common_notification=0x7f050023;
+        public static final int umeng_common_notification_controller=0x7f050020;
+        public static final int umeng_common_progress_bar=0x7f050026;
+        public static final int umeng_common_progress_text=0x7f050025;
+        public static final int umeng_common_rich_notification_cancel=0x7f050022;
+        public static final int umeng_common_rich_notification_continue=0x7f050021;
+        public static final int umeng_common_title=0x7f050024;
+        public static final int umeng_fb_action_collapse=0x7f050029;
+        public static final int umeng_fb_contact_spinner=0x7f050030;
+        public static final int umeng_fb_contact_title=0x7f050028;
+        public static final int umeng_fb_container=0x7f050027;
+        public static final int umeng_fb_reply_content=0x7f050033;
+        public static final int umeng_fb_reply_date=0x7f050034;
+        public static final int umeng_fb_reply_item_view_line=0x7f05002f;
+        public static final int umeng_fb_reply_item_view_tag=0x7f05002e;
+        public static final int umeng_fb_reply_list=0x7f05002d;
+        public static final int umeng_fb_resend=0x7f050035;
+        public static final int umeng_fb_send_btn=0x7f050031;
+        public static final int umeng_fb_send_content=0x7f050032;
+        public static final int umeng_fb_send_layout=0x7f05002b;
+        public static final int umeng_fb_spinnerTarget=0x7f05002a;
+        public static final int umeng_fb_swipe_container=0x7f05002c;
+        public static final int umeng_fb_welcome_info=0x7f050036;
+        public static final int umeng_update_content=0x7f050039;
+        public static final int umeng_update_id_cancel=0x7f05003c;
+        public static final int umeng_update_id_check=0x7f05003a;
+        public static final int umeng_update_id_close=0x7f050038;
+        public static final int umeng_update_id_ignore=0x7f05003d;
+        public static final int umeng_update_id_ok=0x7f05003b;
+        public static final int umeng_update_wifi_indicator=0x7f050037;
+        public static final int unread=0x7f050016;
+        public static final int ut_gridView=0x7f050042;
+        public static final int ut_image1=0x7f05003f;
+        public static final int ut_image2=0x7f050040;
+        public static final int ut_image3=0x7f050041;
+        public static final int ut_loadpic=0x7f05003e;
+        public static final int web_howset=0x7f050011;
+        public static final int web_howshare=0x7f050012;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int appstart=0x7f030001;
-        public static final int title_bar=0x7f030002;
-        public static final int view_progress_indeterminate=0x7f030003;
+        public static final int activity_about=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_preview=0x7f030002;
+        public static final int activity_setting=0x7f030003;
+        public static final int activity_shareexplain=0x7f030004;
+        public static final int appstart=0x7f030005;
+        public static final int divider_line_h=0x7f030006;
+        public static final int fragment_slidingright=0x7f030007;
+        public static final int layout_menu_right=0x7f030008;
+        public static final int slidingmenumain=0x7f030009;
+        public static final int title_bar=0x7f03000a;
+        public static final int umeng_common_download_notification=0x7f03000b;
+        public static final int umeng_fb_activity_conversation=0x7f03000c;
+        public static final int umeng_fb_contact=0x7f03000d;
+        public static final int umeng_fb_contact_spinner=0x7f03000e;
+        public static final int umeng_fb_fragment=0x7f03000f;
+        public static final int umeng_fb_input_contact=0x7f030010;
+        public static final int umeng_fb_input_conversation=0x7f030011;
+        public static final int umeng_fb_reply_item=0x7f030012;
+        public static final int umeng_fb_welcome_item=0x7f030013;
+        public static final int umeng_update_dialog=0x7f030014;
+        public static final int umeng_ut_loadpic=0x7f030015;
+        public static final int view_progress_indeterminate=0x7f030016;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
+        public static final int UMAppUpdate=0x7f09004a;
+        public static final int UMBreak_Network=0x7f090042;
+        public static final int UMDialog_InstallAPK=0x7f09004e;
+        public static final int UMGprsCondition=0x7f090048;
+        public static final int UMIgnore=0x7f09004c;
+        public static final int UMNewVersion=0x7f090044;
+        public static final int UMNotNow=0x7f09004b;
+        public static final int UMTargetSize=0x7f090047;
+        public static final int UMToast_IsUpdating=0x7f09004d;
+        public static final int UMUpdateContent=0x7f090045;
+        public static final int UMUpdateNow=0x7f090049;
+        public static final int UMUpdateSize=0x7f090046;
+        public static final int UMUpdateTitle=0x7f090043;
+        public static final int actionbar_activity_not_found=0x7f090017;
+        public static final int app_name=0x7f090000;
+        public static final int intro=0x7f090019;
+        public static final int umeng_common_action_cancel=0x7f09001f;
+        public static final int umeng_common_action_continue=0x7f09001e;
+        public static final int umeng_common_action_info_exist=0x7f09001b;
+        public static final int umeng_common_action_pause=0x7f09001d;
+        public static final int umeng_common_download_failed=0x7f090024;
+        public static final int umeng_common_download_finish=0x7f090025;
+        public static final int umeng_common_download_notification_prefix=0x7f090020;
+        public static final int umeng_common_icon=0x7f09001a;
+        public static final int umeng_common_info_interrupt=0x7f09001c;
+        public static final int umeng_common_network_break_alert=0x7f090023;
+        public static final int umeng_common_patch_finish=0x7f090026;
+        public static final int umeng_common_start_download_notification=0x7f090021;
+        public static final int umeng_common_start_patch_notification=0x7f090022;
+        public static final int umeng_example_fb_home_btn_simple=0x7f090016;
+        public static final int umeng_example_home_btn_ad=0x7f090003;
+        /**  下面是友盟需要的配置 
+         */
+        public static final int umeng_example_home_btn_analytics=0x7f090001;
+        public static final int umeng_example_home_btn_fb=0x7f090005;
+        public static final int umeng_example_home_btn_plus=0x7f090007;
+        public static final int umeng_example_home_btn_tools=0x7f090004;
+        public static final int umeng_example_home_btn_update=0x7f090006;
+        public static final int umeng_example_home_btn_xp=0x7f090002;
+        public static final int umeng_example_home_btn_xp_ufp=0x7f090008;
+        public static final int umeng_example_home_hint_wait=0x7f090018;
+        public static final int umeng_example_xp_home_btn_banner=0x7f09000a;
+        public static final int umeng_example_xp_home_btn_banner_ufp=0x7f09000b;
+        public static final int umeng_example_xp_home_btn_container=0x7f090009;
+        public static final int umeng_example_xp_home_btn_container_header=0x7f090013;
+        public static final int umeng_example_xp_home_btn_custom=0x7f09000f;
+        public static final int umeng_example_xp_home_btn_handler=0x7f09000c;
+        public static final int umeng_example_xp_home_btn_handler_ufp=0x7f09000d;
+        public static final int umeng_example_xp_home_btn_push_header=0x7f090014;
+        public static final int umeng_example_xp_home_btn_tab=0x7f09000e;
+        public static final int umeng_example_xp_home_btn_textlink=0x7f090012;
+        public static final int umeng_example_xp_home_btn_wap=0x7f090010;
+        public static final int umeng_example_xp_home_btn_wap_ufp=0x7f090011;
+        public static final int umeng_example_xp_home_handler_icons=0x7f090015;
+        public static final int umeng_fb_back=0x7f090028;
+        public static final int umeng_fb_change_contact_title=0x7f09002b;
+        public static final int umeng_fb_contact_email=0x7f090039;
+        public static final int umeng_fb_contact_info=0x7f09002c;
+        public static final int umeng_fb_contact_info_hint=0x7f090027;
+        public static final int umeng_fb_contact_key_email=0x7f09003f;
+        public static final int umeng_fb_contact_key_other=0x7f090041;
+        public static final int umeng_fb_contact_key_phone=0x7f090040;
+        public static final int umeng_fb_contact_key_qq=0x7f09003e;
+        public static final int umeng_fb_contact_other=0x7f09003b;
+        public static final int umeng_fb_contact_phone=0x7f09003a;
+        public static final int umeng_fb_contact_qq=0x7f090038;
+        public static final int umeng_fb_contact_save=0x7f090033;
+        public static final int umeng_fb_feedback=0x7f090032;
+        public static final int umeng_fb_notification_content_formatter_multiple_msg=0x7f090031;
+        public static final int umeng_fb_notification_content_formatter_single_msg=0x7f090030;
+        public static final int umeng_fb_notification_ticker_text=0x7f09002f;
+        public static final int umeng_fb_reply_content_default=0x7f09002e;
+        public static final int umeng_fb_send=0x7f09002d;
+        public static final int umeng_fb_send_fail=0x7f09003c;
+        public static final int umeng_fb_sending=0x7f09003d;
+        public static final int umeng_fb_time_minutes_ago=0x7f090035;
+        public static final int umeng_fb_time_pre_year_format=0x7f090037;
+        public static final int umeng_fb_time_right_now=0x7f090034;
+        public static final int umeng_fb_time_this_year_format=0x7f090036;
+        public static final int umeng_fb_title=0x7f090029;
+        public static final int umeng_fb_write_contact_title=0x7f09002a;
     }
     public static final class style {
-        public static final int Dialog=0x7f060000;
-        public static final int progress_indeterminate=0x7f060001;
-        public static final int sendbutton=0x7f060003;
-        public static final int titleBar=0x7f060002;
-        public static final int title_text=0x7f060004;
+        public static final int AnimationActivity=0x7f0a0000;
+        public static final int AppTheme=0x7f0a0001;
+        public static final int ButtonStyle=0x7f0a000c;
+        /**  普通模式 
+         */
+        public static final int DefultTheme=0x7f0a0002;
+        public static final int Dialog=0x7f0a0003;
+        /**  宽、高全屏 
+         */
+        public static final int fill=0x7f0a000a;
+        /**  宽全屏，高自适应 
+         */
+        public static final int fill_width=0x7f0a0009;
+        public static final int menu_text=0x7f0a000b;
+        public static final int progress_indeterminate=0x7f0a0004;
+        public static final int sendbutton=0x7f0a0006;
+        public static final int titleBar=0x7f0a0005;
+        public static final int title_text=0x7f0a0007;
+        /**  自适应宽高 
+         */
+        public static final int wrap=0x7f0a0008;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a SlidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SlidingMenu_behindOffset com.kindleassistant:behindOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindScrollScale com.kindleassistant:behindScrollScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindWidth com.kindleassistant:behindWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeDegree com.kindleassistant:fadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeEnabled com.kindleassistant:fadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_mode com.kindleassistant:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorDrawable com.kindleassistant:selectorDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorEnabled com.kindleassistant:selectorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowDrawable com.kindleassistant:shadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowWidth com.kindleassistant:shadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeAbove com.kindleassistant:touchModeAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeBehind com.kindleassistant:touchModeBehind}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewAbove com.kindleassistant:viewAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehind com.kindleassistant:viewBehind}</code></td><td></td></tr>
+           </table>
+           @see #SlidingMenu_behindOffset
+           @see #SlidingMenu_behindScrollScale
+           @see #SlidingMenu_behindWidth
+           @see #SlidingMenu_fadeDegree
+           @see #SlidingMenu_fadeEnabled
+           @see #SlidingMenu_mode
+           @see #SlidingMenu_selectorDrawable
+           @see #SlidingMenu_selectorEnabled
+           @see #SlidingMenu_shadowDrawable
+           @see #SlidingMenu_shadowWidth
+           @see #SlidingMenu_touchModeAbove
+           @see #SlidingMenu_touchModeBehind
+           @see #SlidingMenu_viewAbove
+           @see #SlidingMenu_viewBehind
+         */
+        public static final int[] SlidingMenu = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#behindOffset}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:behindOffset
+        */
+        public static final int SlidingMenu_behindOffset = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#behindScrollScale}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:behindScrollScale
+        */
+        public static final int SlidingMenu_behindScrollScale = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#behindWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:behindWidth
+        */
+        public static final int SlidingMenu_behindWidth = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#fadeDegree}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:fadeDegree
+        */
+        public static final int SlidingMenu_fadeDegree = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#fadeEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:fadeEnabled
+        */
+        public static final int SlidingMenu_fadeEnabled = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#mode}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.kindleassistant:mode
+        */
+        public static final int SlidingMenu_mode = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#selectorDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.kindleassistant:selectorDrawable
+        */
+        public static final int SlidingMenu_selectorDrawable = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#selectorEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:selectorEnabled
+        */
+        public static final int SlidingMenu_selectorEnabled = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#shadowDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.kindleassistant:shadowDrawable
+        */
+        public static final int SlidingMenu_shadowDrawable = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#shadowWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.kindleassistant:shadowWidth
+        */
+        public static final int SlidingMenu_shadowWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#touchModeAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.kindleassistant:touchModeAbove
+        */
+        public static final int SlidingMenu_touchModeAbove = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#touchModeBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.kindleassistant:touchModeBehind
+        */
+        public static final int SlidingMenu_touchModeBehind = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#viewAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.kindleassistant:viewAbove
+        */
+        public static final int SlidingMenu_viewAbove = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.kindleassistant.R.attr#viewBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.kindleassistant:viewBehind
+        */
+        public static final int SlidingMenu_viewBehind = 2;
+    };
 }

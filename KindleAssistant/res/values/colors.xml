@@ -3,10 +3,10 @@
 
     <color name="content_bg">#fff</color>
     <color name="menu_bg">#3b3b3b</color>
-    <color name="title_bar_bg">#b92021</color>
-    <color name="page_bg">#EDF1F4</color>
+    <color name="title_bar_bg">#2196F3</color>
+    <color name="page_bg">#efeff4</color>
 	<color name="text_color">#000</color>
 	
-	<drawable name="send_but_pressed">#F7F7F7</drawable>
-	<drawable name="send_but_nomal">#8B0000</drawable>
+	<drawable name="btn_pressed">#1976D2</drawable>
+	<drawable name="btn_nomal">#2196F3</drawable>
 </resources>

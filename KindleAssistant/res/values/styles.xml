@@ -1,5 +1,21 @@
 <resources>
 
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar"></style>
+
+    <!-- 普通模式 -->
+    <style name="DefultTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
     <style name="Dialog" parent="@android:style/Theme.Dialog">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -26,7 +42,8 @@
         <item name="android:paddingRight">8dp</item>
         <item name="android:paddingTop">5dp</item>
     </style>
-        <style name="sendbutton">
+
+    <style name="sendbutton">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:shadowColor">#101112</item>
@@ -43,6 +60,31 @@
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 自适应宽高 -->
+    <style name="wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 宽全屏，高自适应 -->
+    <style name="fill_width">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 宽、高全屏 -->
+    <style name="fill">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="menu_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/text_menu_selector</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>
