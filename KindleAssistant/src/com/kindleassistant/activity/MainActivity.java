@@ -34,6 +34,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	private String url;
 	private String preview_url;
 	private String user_url;
+	private String shared_url;
 	private String user_email;
 	private EditText et_user_url;
 	public static String RIGHT_FRAGMENT = "slidingmenu_right";
@@ -68,6 +69,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			if (type.startsWith("text/")) {
 				// 处理获取到的文本，这里我们用TextView显示
 				String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
+				this.shared_url = sharedUrl;
 				et_user_url.setText(sharedUrl);
 			}
 		}
@@ -76,12 +78,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	protected void onResume() {
 		super.onResume();
-
+	
 		// 获取剪切板里面的内容
 		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
 		// 如果剪切板里面有内容就赋值给textview
-		if (clipboarManager.getText() != null) {
+		if (clipboarManager.getText() != null && TextUtils.isEmpty(shared_url)) {
 			et_user_url.setText(clipboarManager.getText().toString());
 		}
 	}
