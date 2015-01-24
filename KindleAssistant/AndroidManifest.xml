@@ -57,6 +57,8 @@
         </activity>
         <activity android:name="com.kindleassistant.activity.AboutActivity" >
         </activity>
+                <activity android:name="com.kindleassistant.activity.UploadActivity" >
+        </activity>
 
         <!-- 友盟插件 -->
         <activity android:name="com.umeng.fb.ConversationActivity" />
