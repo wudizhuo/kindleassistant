@@ -13,6 +13,7 @@ import com.kindleassistant.R;
 import com.kindleassistant.activity.AboutActivity;
 import com.kindleassistant.activity.SettingActivity;
 import com.kindleassistant.activity.ShareExplainActivity;
+import com.kindleassistant.activity.UploadActivity;
 import com.kindleassistant.common.BaseFragment;
 import com.kindleassistant.manager.UpdateMgr;
 import com.kindleassistant.manager.UpdateMgr.UpdateListener;
@@ -42,6 +43,7 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 		view.findViewById(R.id.check_update).setOnClickListener(this);
 		view.findViewById(R.id.share).setOnClickListener(this);
 		view.findViewById(R.id.about).setOnClickListener(this);
+		view.findViewById(R.id.uploads).setOnClickListener(this);
 		initBtn();
 		return view;
 	}
@@ -89,6 +91,9 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 			break;
 		case R.id.about:
 			startActivity(new Intent(mContext, AboutActivity.class));
+			break;
+		case R.id.uploads:
+			startActivity(new Intent(mContext, UploadActivity.class));
 			break;
 		default:
 			break;
