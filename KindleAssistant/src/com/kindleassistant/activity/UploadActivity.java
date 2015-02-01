@@ -2,12 +2,10 @@ package com.kindleassistant.activity;
 
 import java.io.File;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,15 +17,13 @@ import android.widget.Toast;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
 import com.kindleassistant.net.FileUploadAsyncTask;
-import com.kindleassistant.utils.LogUtil;
 
 public class UploadActivity extends BaseActivity implements OnClickListener {
 	private String uploads_url;
 	private String user_email;
 	// 要上传的文件路径，放在SD卡根目录下
-	private String uploadFile = Environment.getExternalStorageDirectory()
-			.getPath() + "/Download/A.jpg";
-	private TextView file;
+	private String uploadFile = "";
+	private File file;
 	private ImageView image;
 	private Button upload;
 	private Button download;
@@ -36,8 +32,7 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_uploads);
 
-		file = (TextView) findViewById(R.id.file);
-		file.setText(uploadFile);
+	
 		image = (ImageView) findViewById(R.id.image);
 		upload = (Button) findViewById(R.id.upload);
 		upload.setOnClickListener(this);
@@ -60,11 +55,16 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
         // TODO Auto-generated method stub  
         if (resultCode == this.RESULT_OK) {  
             // Get the Uri of the selected file  
-            Uri uri = data.getData();  
-            String realPathFromURI = getRealPathFromURI(uri);
-//            url = FileUtils.getPath(getActivity(), uri);
-//			Log.i("ht", "url" + url);
-//			String fileName = url.substring(url.lastIndexOf("/") + 1);
+            String uri = data.getData().toString();  
+            String pattrn="file://";
+            String realPathFromURI = uri.split(pattrn)[1];
+            
+//            String realPathFromURI = getRealPathFromURI(uri);
+            this.uploadFile = realPathFromURI;
+            file = new File(uploadFile);
+            float length = file.length();
+        	TextView file_text = (TextView) findViewById(R.id.file);
+    		file_text.setText(this.uploadFile + "   大小为：" +length/(1024 * 1024)+"M");
         }
     }  
 	
