@@ -65,7 +65,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	}
 
 	public void getSendUrl() {
-		
+
 		// 获取分享的网址url
 		Intent intent = getIntent();
 		// 获得Intent的Action
@@ -73,15 +73,15 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		// 获得Intent的MIME type
 		String type = intent.getType();
 		if (Intent.ACTION_SEND.equals(action) && type != null && !isShared) {
-			// 我们这里处理所有的文本类型
-			if (type.startsWith("text/")) {
-				// 处理获取到的文本，这里我们用TextView显示
-				String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
+			// 处理获取到的文本，这里我们用TextView显示
+			String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
+			if (!TextUtils.isEmpty(sharedUrl) && sharedUrl.contains("http://")) {
+				sharedUrl = sharedUrl.substring(sharedUrl.indexOf("http:"));
 				et_user_url.setText(sharedUrl);
+				isShared = true;
 			}
-			isShared = true;
-		} 
-		
+		}
+
 		// 获取剪切板里面的内容
 		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
@@ -90,7 +90,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			et_user_url.setText(clipboarManager.getText().toString());
 			isShared = false;
 		}
-
 
 	}
 
