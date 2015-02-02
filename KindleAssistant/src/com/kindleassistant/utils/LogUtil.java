@@ -34,4 +34,8 @@ public class LogUtil {
 	public static void s(String msg) {
 		i("sunzhuo", msg);
 	}
+
+	public static void w(String msg) {
+		i("wuzhenyu", msg);
+	}
 }

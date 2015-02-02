@@ -11,9 +11,12 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ConnectTimeoutException;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.ContentBody;
 import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.params.CoreProtocolPNames;
@@ -21,12 +24,18 @@ import org.apache.http.protocol.HTTP;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.kindleassistant.AppConstants;
+import com.kindleassistant.AppPreferences;
+import com.kindleassistant.activity.MainActivity;
+import com.kindleassistant.activity.SettingActivity;
+import com.kindleassistant.activity.UploadActivity;
 import com.kindleassistant.entity.ProgressListener;
 import com.kindleassistant.utils.ProgressOutHttpEntity;
+import com.kindleassistant.utils.ToastUtil;
 
 public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 
@@ -57,6 +66,11 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 
 		File file = params[0];
 		entitys.addPart("file", new FileBody(file));
+		String user_email = AppPreferences.getEmail();
+		StringBody email = new StringBody(user_email, ContentType.MULTIPART_FORM_DATA);
+		StringBody app_uid = new StringBody(AppPreferences.getAppUid(), ContentType.MULTIPART_FORM_DATA);
+		entitys.addPart("email", email);
+		entitys.addPart("app_uid", app_uid);
 		HttpEntity httpEntity = entitys.build();
 		totalSize = httpEntity.getContentLength();
 		ProgressOutHttpEntity progressHttpEntity = new ProgressOutHttpEntity(

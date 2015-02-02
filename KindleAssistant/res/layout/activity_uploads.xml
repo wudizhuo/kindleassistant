@@ -9,36 +9,41 @@
 
     <Button
         android:id="@+id/btn_select"
+        style="@style/sendbutton"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_selector"
         android:text="选择文件" />
 
-       <Button
-        android:id="@+id/upload"
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="上传" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:text="上传文件名：" />
 
     <TextView
         android:id="@+id/file"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#e0e0e0"
         android:text="" />
 
     <Button
-        android:id="@+id/download"
+        android:id="@+id/upload"
+        style="@style/sendbutton"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="下载" />
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_selector"
+        android:text="上传" />
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-/>
 </LinearLayout>
