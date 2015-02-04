@@ -52,7 +52,7 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 	protected void onPreExecute() {
 		pd = new ProgressDialog(context);
 		pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		pd.setMessage("上传中....");
+		pd.setMessage("正在上传中....");
 		pd.setCancelable(false);
 		pd.show();
 	}
@@ -68,7 +68,8 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 		entitys.addPart("file", new FileBody(file));
 		String user_email = AppPreferences.getEmail();
 		StringBody email = new StringBody(user_email, ContentType.MULTIPART_FORM_DATA);
-		StringBody app_uid = new StringBody(AppPreferences.getAppUid(), ContentType.MULTIPART_FORM_DATA);
+		String uid = AppPreferences.getAppUid();
+		StringBody app_uid = new StringBody(uid, ContentType.MULTIPART_FORM_DATA);
 		entitys.addPart("email", email);
 		entitys.addPart("app_uid", app_uid);
 		HttpEntity httpEntity = entitys.build();
@@ -86,6 +87,11 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 	@Override
 	protected void onProgressUpdate(Integer... progress) {
 		pd.setProgress((int) (progress[0]));
+		if((int)progress[0] == 100){
+			pd.setMessage("已上传成功，正在发送....请稍后,文件越大时间越长，此对话框消失就发送成功");
+			
+		}
+		
 	}
 
 	@Override

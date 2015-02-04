@@ -17,9 +17,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.Response.Listener;
+import com.kindleassistant.AppConstants;
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
+import com.kindleassistant.entity.SendUrl;
+import com.kindleassistant.entity.SendUrlRsp;
+import com.kindleassistant.entity.UpdateEmail;
+import com.kindleassistant.manager.VolleyMgr;
+import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.utils.StatServiceUtil;
 
 public class SettingActivity extends BaseActivity implements OnClickListener {
 	private Spinner sp_emails;
@@ -64,6 +72,7 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 			Toast toast = Toast.makeText(getApplicationContext(), "设置成功",
 					Toast.LENGTH_SHORT);
 			toast.show();
+			update_email(user_email);
 			new Handler().postDelayed(new Runnable() {
 				@Override
 				public void run() {
@@ -76,5 +85,38 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		default:
 			break;
 		}
+	}
+	public void update_email(String email) {
+		showProgressDialog();
+		UpdateEmail requst = new UpdateEmail(AppPreferences.getAppUid(), email);
+
+		VolleyMgr.getInstance().sendRequest(
+				new GsonRequest<SendUrlRsp>(AppConstants.UPDATE_EMAIL, requst, SendUrlRsp.class,
+						new Listener<SendUrlRsp>() {
+
+							@Override
+							public void onResponse(SendUrlRsp arg0) {
+								dismissProgressDialog();
+								if (arg0.getStatus() == 0) {
+
+									Toast toast = Toast.makeText(
+											getApplicationContext(), "设置成功",
+											Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送成功");
+
+									toast.show();
+								} else {
+									Toast toast = Toast.makeText(
+											getApplicationContext(),
+											arg0.getMsg(), Toast.LENGTH_SHORT);
+									StatServiceUtil.trackEvent("发送按钮-发送失败--"
+											+ arg0.getMsg());
+									toast.show();
+
+								}
+							}
+
+						}));
+
 	}
 }

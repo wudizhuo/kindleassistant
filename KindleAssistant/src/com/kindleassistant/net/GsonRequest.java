@@ -1,16 +1,14 @@
 package com.kindleassistant.net;
 
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
-import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
+import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -101,5 +99,13 @@ public class GsonRequest<T> extends BaseRequest<T> {
 			uee.printStackTrace();
 			return null;
 		}
+	}
+
+	@Override
+	public RetryPolicy getRetryPolicy() {
+		RetryPolicy retryPolicy = new DefaultRetryPolicy(6 * 1000,
+				DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+				DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+		return retryPolicy;
 	}
 }

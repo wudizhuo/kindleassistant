@@ -1,6 +1,8 @@
 package com.kindleassistant.activity;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.text.DecimalFormat;
 
 import android.content.Intent;
@@ -74,7 +76,12 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
             }else if(uri.startsWith("content://")){
             	realPathFromURI = getRealPathFromURI(data.getData());
             }
-            this.uploadFile = realPathFromURI;
+            try {
+				this.uploadFile = URLDecoder.decode(realPathFromURI,"UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             file = new File(uploadFile);
             float length = file.length();
         	TextView file_text = (TextView) findViewById(R.id.file);
