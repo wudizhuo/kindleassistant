@@ -1,19 +1,21 @@
 package com.kindleassistant.common;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.kindleassistant.R;
 import com.kindleassistant.view.CustomerProgressDialog;
 import com.umeng.analytics.MobclickAgent;
 
-public abstract class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
 	private CustomerProgressDialog progressDialog;
 	private boolean progressOnShow = false;
+	private Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,19 @@ public abstract class BaseActivity extends FragmentActivity {
 		super.onResume();
 		MobclickAgent.onResume(this);
 	}
+
+	@Override
+	public void setSupportActionBar(Toolbar toolbar) {
+		super.setSupportActionBar(toolbar);
+		toolbar.setOnMenuItemClickListener(onMenuItemClickListener);
+	}
+
+	Toolbar.OnMenuItemClickListener onMenuItemClickListener = new Toolbar.OnMenuItemClickListener() {
+		@Override
+		public boolean onMenuItemClick(MenuItem menuItem) {
+			return false;
+		}
+	};
 
 	@Override
 	protected void onPause() {
@@ -48,12 +63,20 @@ public abstract class BaseActivity extends FragmentActivity {
 			progressOnShow = true;
 		}
 	}
-	
-	public void setTitleText(String text) {
-		TextView tv_titlebar_midtv = (TextView) findViewById(R.id.tv_titlebar_midtv);
-		tv_titlebar_midtv.setText(text);
+
+	@Override
+	public void setContentView(int layoutResID) {
+		super.setContentView(layoutResID);
+		initTitleBar();
 	}
 
+	private void initTitleBar() {
+		if (getSupportActionBar() == null && findViewById(R.id.view_title) != null) {
+			toolbar = (Toolbar) findViewById(R.id.view_title);
+			setSupportActionBar(toolbar);
+		}
+	}
+	
 	/**
 	 * 显示等待对话框
 	 */

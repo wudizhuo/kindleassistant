@@ -3,11 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/page_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/title_bar"
-        layout="@layout/title_bar" />
+        layout="@layout/view_title" />
 
     <ImageView
         android:id="@+id/iv_icon"
@@ -32,11 +32,23 @@
         android:id="@+id/tv_author"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_feedback"
+        android:layout_margin="10dp"
+        android:gravity="bottom"
+        android:lineSpacingExtra="2sp"
+        android:text="作者： 吴振宇、无敌卓" />
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
         android:gravity="bottom"
         android:lineSpacingExtra="2sp"
         android:paddingBottom="20dp"
-        android:text=" 作者： 吴振宇、无敌卓 \n 邮箱：kindleassistant@126.com \n \n 如有建议 欢迎邮件联系" />
+        android:textSize="16dp"
+        android:text="联系作者"
+        android:textColor="@color/actionbar_background" />
 
 </RelativeLayout>

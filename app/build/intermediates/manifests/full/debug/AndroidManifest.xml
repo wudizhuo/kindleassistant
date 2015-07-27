@@ -52,35 +52,29 @@
         </activity>
         <activity
             android:name="com.kindleassistant.activity.SettingActivity"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity android:name="com.kindleassistant.activity.PreviewActivity" >
-        </activity>
-        <activity android:name="com.kindleassistant.activity.ShareExplainActivity" >
-        </activity>
-        <activity android:name="com.kindleassistant.activity.AboutActivity" >
-        </activity>
-        <activity android:name="com.kindleassistant.activity.UploadActivity" >
-        </activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.kindleassistant.activity.PreviewActivity" />
+        <activity android:name="com.kindleassistant.activity.ShareExplainActivity" />
+        <activity
+            android:name="com.kindleassistant.activity.AboutActivity"
+            android:label="关于" />
+        <activity android:name="com.kindleassistant.activity.UploadActivity" />
 
         <!-- 友盟插件 -->
         <activity android:name="com.umeng.fb.ConversationActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="54a8fb2dfd98c577c50005d0" >
-        </meta-data>
+            android:value="54a8fb2dfd98c577c50005d0" />
 
         <!-- 自动更新服务 -->
         <service
             android:name="com.umeng.update.net.DownloadingService"
-            android:process=":DownloadingService" >
-        </service>
+            android:process=":DownloadingService" />
 
         <activity
             android:name="com.umeng.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- 【必须】 信鸽receiver广播接收 -->
         <receiver
             android:name="com.tencent.android.tpush.XGPushReceiver"
@@ -100,8 +94,7 @@
         <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
         <activity
             android:name="com.tencent.android.tpush.XGPushActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
 
         <!-- 【必须】 信鸽service -->
         <service
