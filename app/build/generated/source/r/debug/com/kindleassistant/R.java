@@ -134,29 +134,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class color {
         public static final int accent_1=0x7f070000;
-        public static final int all_track_color=0x7f070001;
-        public static final int background_1=0x7f070002;
-        public static final int block_column_1=0x7f070003;
-        public static final int block_column_2=0x7f070004;
-        public static final int block_column_3=0x7f070005;
-        public static final int body_text_1=0x7f070006;
-        public static final int body_text_1_inverse=0x7f070007;
-        public static final int body_text_2=0x7f070008;
-        public static final int body_text_2_inverse=0x7f070009;
-        public static final int body_text_disabled=0x7f07000a;
-        public static final int content_bg=0x7f07000b;
-        public static final int hyperlink=0x7f07000c;
-        public static final int menu_bg=0x7f07000d;
-        public static final int page_bg=0x7f07000e;
-        public static final int text_color=0x7f07000f;
-        public static final int text_menu_press=0x7f070010;
-        public static final int title_bar_bg=0x7f070011;
-        public static final int umeng_fb_gray=0x7f070012;
-        public static final int umeng_fb_lightblue=0x7f070013;
-        public static final int umeng_fb_line=0x7f070014;
-        public static final int umeng_fb_secondary_text_light=0x7f070015;
-        public static final int umeng_fb_white=0x7f070016;
-        public static final int whats_on_separator=0x7f070017;
+        public static final int actionbar_background=0x7f070001;
+        public static final int all_track_color=0x7f070002;
+        public static final int background_1=0x7f070003;
+        public static final int block_column_1=0x7f070004;
+        public static final int block_column_2=0x7f070005;
+        public static final int block_column_3=0x7f070006;
+        public static final int body_text_1=0x7f070007;
+        public static final int body_text_1_inverse=0x7f070008;
+        public static final int body_text_2=0x7f070009;
+        public static final int body_text_2_inverse=0x7f07000a;
+        public static final int body_text_disabled=0x7f07000b;
+        public static final int content_bg=0x7f07000c;
+        public static final int hyperlink=0x7f07000d;
+        public static final int menu_bg=0x7f07000e;
+        public static final int page_bg=0x7f07000f;
+        public static final int text_color=0x7f070010;
+        public static final int text_menu_press=0x7f070011;
+        public static final int title_bar_bg=0x7f070012;
+        public static final int umeng_fb_gray=0x7f070013;
+        public static final int umeng_fb_lightblue=0x7f070014;
+        public static final int umeng_fb_line=0x7f070015;
+        public static final int umeng_fb_secondary_text_light=0x7f070016;
+        public static final int umeng_fb_white=0x7f070017;
+        public static final int whats_on_separator=0x7f070018;
     }
     public static final class dimen {
         public static final int actionbar_height=0x7f080000;
@@ -416,14 +417,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ButtonStyle=0x7f050001;
         public static final int DefultTheme=0x7f050003;
         public static final int Dialog=0x7f050004;
-        public static final int fill=0x7f050005;
-        public static final int fill_width=0x7f050006;
-        public static final int menu_text=0x7f050007;
-        public static final int progress_indeterminate=0x7f050008;
-        public static final int sendbutton=0x7f050009;
-        public static final int titleBar=0x7f05000a;
-        public static final int title_text=0x7f05000b;
-        public static final int wrap=0x7f05000c;
+        public static final int MyActionBar=0x7f050005;
+        public static final int MyTheme_MyActionBar_TitleTextStyle=0x7f050006;
+        public static final int fill=0x7f050007;
+        public static final int fill_width=0x7f050008;
+        public static final int menu_text=0x7f050009;
+        public static final int progress_indeterminate=0x7f05000a;
+        public static final int sendbutton=0x7f05000b;
+        public static final int titleBar=0x7f05000c;
+        public static final int title_text=0x7f05000d;
+        public static final int wrap=0x7f05000e;
     }
     public static final class styleable {
         /** Attributes that can be used with a SlidingMenu.

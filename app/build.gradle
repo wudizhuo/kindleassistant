@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.kindleassistant"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 21
     }
 
