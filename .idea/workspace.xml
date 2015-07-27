@@ -2,160 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b912d83b-2c01-4110-9fdc-662faed809f2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/assets/email.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/assets/howset.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/assets/howuse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/assets/kindle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/assets/share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/gen/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/gen/com/jeremyfeinstein/slidingmenu/lib/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/gen/com/kindleassistant/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/gen/com/kindleassistant/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/ic_launcher-web.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/kindleassistant" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/Xg_sdk_v2.31.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/android-support-v4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/android-support-v4.jar.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/armeabi/libbspatch.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/armeabi/libtpnsSecurity.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/armeabi/libtpnsWatchdog.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/com.umeng.fb.v5.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/gson-2.2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/httpcore-4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/httpmime-4.3.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/mid-sdk-2.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/umeng-analytics-v5.2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/umeng-update-v2.4.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/volley.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/libs/wup-1.0.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/proguard-project.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/proguard/dump.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/proguard/mapping.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/proguard/seeds.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/anim/slide_in_left.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/anim/slide_in_right.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/anim/slide_out_left.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/anim/slide_out_right.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/btn_blue.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/btn_blue_press.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/divider_line.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/loading.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/tab_unread_bg.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_fb_action_replay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_fb_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_off_focused_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_off_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_off_pressed_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_on_focused_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_on_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_btn_check_on_pressed_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_close_bg_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/umeng_update_close_bg_tap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable-hdpi/welcome.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/btn_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/dialog_window_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/progress_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/progress_loading.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/right_btn_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/text_menu_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_analytics.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_common_gradient_green.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_common_gradient_orange.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_common_gradient_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_strock_bg_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_tools.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_cancel_bg_focused.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_cancel_bg_normal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_cancel_bg_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_cancel_bg_tap.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_check_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_close_bg_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_ok_bg_focused.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_ok_bg_normal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_ok_bg_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_button_ok_bg_tap.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_dialog_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_title_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_update_wifi_disable.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/drawable/umeng_xp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_about.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_preview.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_setting.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_shareexplain.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/activity_uploads.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/appstart.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/divider_line_h.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/fragment_slidingright.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/layout_menu_right.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/title_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_common_download_notification.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_activity_conversation.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_contact.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_contact_spinner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_fragment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_input_contact.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_input_conversation.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_reply_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_fb_welcome_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_update_dialog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/umeng_ut_loadpic.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/layout/view_progress_indeterminate.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values-v16/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/array.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/um_colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/umeng_common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/umeng_fb_color.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/umeng_fb_dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/umeng_fb_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/res/values/umeng_update_string.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/App.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/AppConstants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/AppPreferences.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/AboutActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/AppStartActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/MainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/PreviewActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/SettingActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/ShareExplainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/activity/UploadActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/common/BaseActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/common/BaseFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/common/BaseRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/common/BaseResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/PreView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/PreViewRsp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/ProgressListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/SendUrl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/SendUrlRsp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/UpdateEmail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/entity/UserCreateApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/fragment/SlidingMenuRight.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/manager/UpdateMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/manager/UserInfoMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/manager/VolleyMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/net/FileDownLoadAsyncTask.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/net/FileUploadAsyncTask.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/net/GsonRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/Base64.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/ChannelUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/CountingInputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/LogUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/ProgressOutHttpEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/StatServiceUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/utils/ToastUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KindleAssistant/src/com/kindleassistant/view/CustomerProgressDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/volley.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="KindleAssistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,8 +56,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2818004">
-              <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.75514406">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -622,6 +471,11 @@
                 <option name="description" value="Prepare com.jeremyfeinstein.slidingmenu:library:1.3" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComJeremyfeinsteinSlidingmenuLibrary13Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.mcxiaoke.volley:library-aar:1.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComMcxiaokeVolleyLibraryAar100Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1120,6 +974,11 @@
                 <option name="name" value="prepareComJeremyfeinsteinSlidingmenuLibrary13Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.mcxiaoke.volley:library-aar:1.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComMcxiaokeVolleyLibraryAar100Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareDebugAndroidTestDependencies" />
               </ExternalTaskPojo>
@@ -1242,7 +1101,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4313940675000" />
+        <entry key="$PROJECT_DIR$" value="4313940888000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1409,6 +1268,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library-aar/1.0.0/cc8071e1ce2c478bc9974c1044c3f6f0b2a96bb0/library-aar-1.0.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jeremyfeinstein.slidingmenu/library/1.3/8de3cbd59ec16fcfe7a2aced64e4e6017ba4a832/library-1.3.aar" />
                             <option value="$MODULE_DIR$/libs/com.umeng.fb.v5.0.0.jar" />
                             <option value="$MODULE_DIR$/libs/httpcore-4.3.jar" />
@@ -1416,7 +1276,6 @@
                             <option value="$MODULE_DIR$/libs/mid-sdk-2.10.jar" />
                             <option value="$MODULE_DIR$/libs/umeng-analytics-v5.2.4.jar" />
                             <option value="$MODULE_DIR$/libs/umeng-update-v2.4.2.jar" />
-                            <option value="$MODULE_DIR$/libs/volley.jar" />
                             <option value="$MODULE_DIR$/libs/wup-1.0.0-SNAPSHOT.jar" />
                             <option value="$MODULE_DIR$/libs/Xg_sdk_v2.31.jar" />
                           </list>
@@ -1694,6 +1553,31 @@
       <option name="INVALID_CLOUD_SELECTION_ERROR" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_SELECTION_ERROR" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1707,6 +1591,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1728,6 +1628,12 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/app/libs/volley.jar" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1881,8 +1787,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2818004">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.75514406">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
           <folding />
         </state>
       </provider>
