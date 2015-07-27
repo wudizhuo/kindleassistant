@@ -1,5 +1,12 @@
 package com.kindleassistant;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
+
+import com.kindleassistant.utils.Base64;
+import com.kindleassistant.utils.LogUtil;
+
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -12,13 +19,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
-
-import com.kindleassistant.utils.Base64;
-import com.kindleassistant.utils.LogUtil;
 
 public class AppPreferences {
 	private static final int IV_SIZE = 16;
@@ -39,6 +39,7 @@ public class AppPreferences {
 	private static final String IS_REGISTERPUSH = "is_registerpush";
 	private static final String HAS_SLIDINGGUIDE = "has_slidingguide";
 	private static final String USER_EMAIL = "user_email";
+	private static final String USER_FROM_EMAIL = "user_from_email";
 	private static final String APPUID = "AppUid";
 
 	protected static byte[] generateKey(int len) {
@@ -189,9 +190,14 @@ public class AppPreferences {
 	public static String getEmail() {
 		return sPreferences.getString(USER_EMAIL, "");
 	}
-
+	public static String getFromEmail() {
+		return sPreferences.getString(USER_FROM_EMAIL, "");
+	}
 	public static boolean setEmail(String value) {
 		return sPreferences.edit().putString(USER_EMAIL, value).commit();
+	}
+	public static boolean setFromEmail(String value) {
+		return sPreferences.edit().putString(USER_FROM_EMAIL, value).commit();
 	}
 
 }

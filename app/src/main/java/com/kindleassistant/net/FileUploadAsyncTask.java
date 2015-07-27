@@ -61,10 +61,14 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
         File file = params[0];
         entitys.addPart("file", new FileBody(file));
         String user_email = AppPreferences.getEmail();
-        StringBody email = new StringBody(user_email, ContentType.MULTIPART_FORM_DATA);
+        StringBody to_email = new StringBody(user_email, ContentType.MULTIPART_FORM_DATA);
+        String user_from_email = AppPreferences.getFromEmail();
+        StringBody from_email = new StringBody(user_from_email, ContentType.MULTIPART_FORM_DATA);
+
         String uid = AppPreferences.getAppUid();
         StringBody app_uid = new StringBody(uid, ContentType.MULTIPART_FORM_DATA);
-        entitys.addPart("email", email);
+        entitys.addPart("to_email", to_email);
+        entitys.addPart("from_email", from_email);
         entitys.addPart("app_uid", app_uid);
         HttpEntity httpEntity = entitys.build();
         totalSize = httpEntity.getContentLength();

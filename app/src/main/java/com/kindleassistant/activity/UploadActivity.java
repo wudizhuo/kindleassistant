@@ -1,10 +1,5 @@
 package com.kindleassistant.activity;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.text.DecimalFormat;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -26,9 +21,13 @@ import com.kindleassistant.utils.LogUtil;
 import com.kindleassistant.utils.StatServiceUtil;
 import com.kindleassistant.utils.ToastUtil;
 
-public class UploadActivity extends BaseActivity implements OnClickListener {
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
+public class  UploadActivity extends BaseActivity implements OnClickListener {
 	private String uploads_url;
-	private String user_email;
+	private String user_email, user_from_email;
 	// 要上传的文件路径，放在SD卡根目录下
 	private String uploadFile = "";
 	private File file;
@@ -113,9 +112,10 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
 			break;
 		case R.id.upload:
 			this.user_email = AppPreferences.getEmail();
-			if (this.user_email == null || this.user_email.length() <= 0) {
+			this.user_from_email = AppPreferences.getFromEmail();
+			if (this.user_email == null || this.user_email.length() <= 0 || this.user_from_email == null || this.user_from_email.length() <= 0) {
 	
-				ToastUtil.showInCenter("请您先去设置邮箱");
+				ToastUtil.showInCenter("请您先去设置发送邮箱或者信任邮箱");
 				StatServiceUtil.trackEvent("未设置邮箱前上传点击");
 				new Handler().postDelayed(new Runnable() {
 					@Override

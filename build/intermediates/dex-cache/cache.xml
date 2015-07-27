@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/classes-97608f2712b2f32eb9459b3d6bba39061d2eeb99.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/mid-sdk-2.10.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5b8c105b39a07ec1c2ca81919d64eac5482dca87">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/mid-sdk-2.10-01a024169890d49b7efe67defa237368980f4d04.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/gson-2.2.4-7fdbeb071f33c24779f5c3a6d348230b407caf3f.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-fdd906840173bafe5dd9a61618d5dd40a649049e.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.jeremyfeinstein.slidingmenu/library/1.3/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0e4072fd48238419f424a112fdeb828d91f69e1a">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/classes-d90f46cae13af0bc5547dbb2dc3a395d07c53323.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/httpcore-4.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8dfd6286d04ad9dbf26cdf7d4ef5c8fad430cf30">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/httpcore-4.3-000b3697ed70a2dad998a112cd16f980c3fc76f6.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/umeng-analytics-v5.2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0f9eccf79ae6006e4346725b09114182dca0c023">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/umeng-analytics-v5.2.4-a74213deb9257c81332f8de2077e37e3b2279286.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/wup-1.0.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a0845068801a0b9a3a144b7cf57cb650b3d467e5">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/wup-1.0.0-SNAPSHOT-c47d83cf3ea8bf157ca025105cf30709e7a653f6.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/umeng-update-v2.4.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ee700e317f574886dc0a236b801f219df6fbd26d">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/umeng-update-v2.4.2-cbc5f6149f24f05fb373b31a7f361734f11ca23b.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/Xg_sdk_v2.31.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddbb1d4edf1517cec5f373c12437fd7313d585dd">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/Xg_sdk_v2.31-a55af269be348e982f768a5d7a66dd8e5b941747.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/httpmime-4.3.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="54ffde537682aea984c22fbcf0106f21397c5f9b">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/httpmime-4.3.4-296907459f12d3340e33ad363a4c3e1ca5c8bfdf.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-f1b9221a879a27725fd7dd3b2e04d60faae28fd7.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/classes-7fa84a0e256271db02b263e7e8b72c00c77eea2c.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/libs/com.umeng.fb.v5.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="377fef7ef33374644f95fb3d78b26daf3b498945">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/com.umeng.fb.v5.0.0-fb26365d4df2cde8142a47c01448abbb733f5009.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/library-aar/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/classes-92fbbd8d5ed7b38ae369d80c37d8fc0bd7d1a4de.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/kindle/app/build/intermediates/pre-dexed/debug/classes-344cd1884f51bf40dc6bc7d55f146ed1d89b3059.jar" />
+    </item>
+
+</items>

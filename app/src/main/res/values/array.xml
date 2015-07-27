@@ -6,4 +6,15 @@
         <item>\@free.kindle.com</item>
         <item>\@iduokan.com</item>
     </string-array>
+
+    <string-array name="sp_emails2">
+        <item>\@kindle.cn</item>
+        <item>\@kindle.com</item>
+        <item>\@free.kindle.com</item>
+        <item>\@iduokan.com</item>
+        <item>\@qq.com</item>
+        <item>\@126.com</item>
+        <item>\@163.com</item>
+        <item>\@gmail.com</item>
+    </string-array>
 </resources>
