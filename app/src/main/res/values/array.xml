@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sp_emails">
+        <item>\@kindle.cn</item>
+        <item>\@kindle.com</item>
+        <item>\@free.kindle.com</item>
+        <item>\@iduokan.com</item>
+    </string-array>
+</resources>

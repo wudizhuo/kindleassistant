@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/view_title" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/tv_about_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="2sp"
+        android:text="版本号" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_feedback"
+        android:layout_margin="10dp"
+        android:gravity="bottom"
+        android:lineSpacingExtra="2sp"
+        android:text="作者： 吴振宇、无敌卓" />
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:gravity="bottom"
+        android:lineSpacingExtra="2sp"
+        android:paddingBottom="20dp"
+        android:textSize="16dp"
+        android:text="联系作者"
+        android:textColor="@color/actionbar_background" />
+
+</RelativeLayout>

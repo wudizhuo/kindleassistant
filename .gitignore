@@ -5,4 +5,4 @@ KindleAssistant_eclipse/
 /.idea/libraries
 .DS_Store
 /build
-/app
+/app/build
