@@ -7,10 +7,11 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 
-    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar"></style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
 
     <!-- 普通模式 -->
-    <style name="DefultTheme" parent="AppTheme">
+    <style name="DefultTheme" parent="AppBaseTheme">
+        <item name="android:icon">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:windowAnimationStyle">@style/AnimationActivity</item>

@@ -7,6 +7,8 @@ ADDED from AndroidManifest.xml:1:1
 		INJECTED from AndroidManifest.xml:0:0
 	android:versionName
 		ADDED from AndroidManifest.xml:4:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
 	android:versionCode
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -15,6 +17,10 @@ ADDED from AndroidManifest.xml:1:1
 		ADDED from AndroidManifest.xml:1:11
 uses-sdk
 ADDED from AndroidManifest.xml:6:5
+MERGED from com.android.support:design:22.2.0:20:5
+MERGED from com.android.support:appcompat-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.mcxiaoke.volley:library-aar:1.0.0:3:5
 MERGED from com.jeremyfeinstein.slidingmenu:library:1.3:4:5
@@ -92,6 +98,10 @@ ADDED from AndroidManifest.xml:26:5
 		ADDED from AndroidManifest.xml:26:22
 application
 ADDED from AndroidManifest.xml:28:5
+MERGED from com.android.support:design:22.2.0:22:5
+MERGED from com.android.support:appcompat-v7:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.mcxiaoke.volley:library-aar:1.0.0:5:5
 	android:label
