@@ -13,7 +13,7 @@ android {
         applicationId "com.kindleassistant"
         minSdkVersion 14
         targetSdkVersion 20
-        versionCode 9
+        versionCode 10
         versionName "2.0"
     }
 
