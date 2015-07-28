@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/values-v16/styles.xml -->
+    <!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/values-v16/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <item name="@android:buttonStyle">@style/ButtonStyle</item>

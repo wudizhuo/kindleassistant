@@ -3,17 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D3D3D3"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/title_bar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:paddingTop="@dimen/common_page_edge_padding" >
+        android:paddingTop="@dimen/common_page_edge_padding">
 
         <EditText
             android:id="@+id/et_from_email"
-            android:hint="请填写一个您在亚马逊认可的完整的电子邮箱"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
@@ -22,17 +22,19 @@
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:gravity="center_vertical"
-            android:paddingLeft="4dp" />
+            android:hint="请填入一个您的认可列表的邮箱"
+            android:paddingLeft="4dp"
+            android:singleLine="true" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:paddingTop="@dimen/common_page_edge_padding" >
+        android:paddingTop="@dimen/common_page_edge_padding">
+
         <EditText
             android:id="@+id/et_user_email"
-            android:hint="请保存您的kindle电子邮箱"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
@@ -41,7 +43,9 @@
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:gravity="center_vertical"
-            android:paddingLeft="4dp" />
+            android:hint="请填入您的kindle接收邮箱"
+            android:paddingLeft="4dp"
+            android:singleLine="true" />
 
         <Spinner
             android:id="@+id/sp_emails"

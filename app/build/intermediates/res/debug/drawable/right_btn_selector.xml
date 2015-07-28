@@ -4,4 +4,4 @@
     <item android:drawable="@drawable/btn_blue_press" android:state_pressed="true"/>
     <item android:drawable="@drawable/btn_blue"/>
 
-</selector><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/right_btn_selector.xml -->
+</selector><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/right_btn_selector.xml -->

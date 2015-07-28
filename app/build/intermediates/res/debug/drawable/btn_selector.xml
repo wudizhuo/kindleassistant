@@ -4,4 +4,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/btn_pressed"/>
     <item  android:drawable="@drawable/btn_nomal"/>
 
-</selector><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/btn_selector.xml -->
+</selector><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/btn_selector.xml -->

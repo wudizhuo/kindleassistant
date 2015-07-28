@@ -4,4 +4,4 @@
 	<gradient android:startColor="#FFA500" android:endColor="#E0AA6E"
 		android:type="linear" android:angle="90" />
 	<corners android:radius="8dp" />
-</shape><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/umeng_common_gradient_orange.xml -->
+</shape><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/umeng_common_gradient_orange.xml -->

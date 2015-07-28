@@ -3,4 +3,4 @@
     <corners android:radius="6dp" />
     <stroke android:color="#bababa" android:width="1dp" />
     <gradient android:startColor="#dcdcdc" android:endColor="#fbfbfb" android:angle="90"/>
-</shape><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/umeng_update_button_cancel_bg_normal.xml -->
+</shape><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/umeng_update_button_cancel_bg_normal.xml -->

@@ -4,4 +4,4 @@
     <stroke android:color="#ff7900" android:width="3dp" />
     <gradient android:startColor="#079fff" android:endColor="#6bc9ff" android:angle="90"/>
 </shape>
-<!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/umeng_update_button_ok_bg_focused.xml -->
+<!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/umeng_update_button_ok_bg_focused.xml -->

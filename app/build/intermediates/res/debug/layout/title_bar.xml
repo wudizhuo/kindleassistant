@@ -38,4 +38,4 @@
         android:background="@drawable/right_btn_selector"
         android:visibility="gone" />
 
-</RelativeLayout><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/layout/title_bar.xml -->
+</RelativeLayout><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/layout/title_bar.xml -->

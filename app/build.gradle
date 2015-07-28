@@ -13,7 +13,7 @@ android {
         applicationId "com.kindleassistant"
         minSdkVersion 14
         targetSdkVersion 20
-        versionCode 10
+        versionCode 11
         versionName "2.0"
     }
 
@@ -21,6 +21,12 @@ android {
         release {
             minifyEnabled true
             proguardFiles 'proguard-project.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
 

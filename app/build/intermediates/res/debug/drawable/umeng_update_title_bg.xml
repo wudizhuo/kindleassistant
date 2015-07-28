@@ -4,4 +4,4 @@
         	 android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
     <solid  android:color="#FCFCFC"/>
     <stroke android:color="#333333" android:width=".5dp"/>
-</shape><!-- From: file:/Users/wuzhenyu/AndroidStudioProjects/kindle/app/src/main/res/drawable/umeng_update_title_bg.xml -->
+</shape><!-- From: file:/Users/twer/SunZhuo/code/KindleApp/app/src/main/res/drawable/umeng_update_title_bg.xml -->
