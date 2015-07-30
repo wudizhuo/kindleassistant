@@ -1,13 +1,13 @@
 package com.kindleassistant.common;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response.ErrorListener;
 import com.kindleassistant.App;
 import com.kindleassistant.manager.UserInfoMgr;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class BaseRequest<T> extends Request<T> {
 
@@ -16,6 +16,7 @@ public abstract class BaseRequest<T> extends Request<T> {
 		// TODO Auto-generated constructor stub
 	}
 
+	//TODO 重发机制一定要搞定  老是自动重发 太差劲了
 	@Override
 	public Map<String, String> getHeaders() throws AuthFailureError {
 		HashMap<String, String> headers = new HashMap<String, String>();

@@ -27,7 +27,8 @@ public class VolleyMgr {
         request.setRetryPolicy(getRetryPolicy());
         mRequestQueue.add(request);
     }
-    
+
+    //TODO 测试为什么会重发 测试 code
     public RetryPolicy getRetryPolicy() {
         RetryPolicy retryPolicy = new DefaultRetryPolicy(6 * 1000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
