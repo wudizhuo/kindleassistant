@@ -193,3 +193,8 @@
 -keep class com.tencent.android.tpush.**  {* ;}
 -keep class com.tencent.mid.**  {* ;}
 -keep class com.kindleassistant.entity.**  {* ;}
+
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
