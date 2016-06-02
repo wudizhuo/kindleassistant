@@ -1,7 +1,7 @@
 package com.kindleassistant;
 
 public class AppConstants {
-	public static String BASE_URL = "http://114.215.110.96/V2";
+	public static String BASE_URL = "http://api.kindlezhushou.com/v3";
 	public static String TEST_URL = "http://114.215.110.96/test";
 	public static String SEND_URL = BASE_URL+"/send/url";
 	public static String PREVIEW_URL = BASE_URL+"/send/preview/";
