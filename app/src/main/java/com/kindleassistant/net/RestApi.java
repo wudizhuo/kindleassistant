@@ -1,10 +1,16 @@
 package com.kindleassistant.net;
 
-import retrofit2.http.GET;
-import retrofit2.http.Path;
+import com.kindleassistant.entity.SendUrl;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
 
 public interface RestApi {
 
-    @GET("users/{user}/repos")
-    Call<List<Repo>> listRepos(@Path("user") String user);
+    @POST("send")
+    Call<Void> send(@Body SendUrl send);
+
+//    @POST("preview")
+
 }
