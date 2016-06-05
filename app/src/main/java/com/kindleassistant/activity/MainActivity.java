@@ -31,7 +31,6 @@ import com.kindleassistant.utils.StatServiceUtil;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
 
-	private String url;
 	private String preview_url;
 	private String user_url;
 	private String user_email;
@@ -55,7 +54,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		findViewById(R.id.btn_title_right).setOnClickListener(this);
 		findViewById(R.id.bt_clear).setOnClickListener(this);
 		findViewById(R.id.bt_preview).setOnClickListener(this);
-		this.url = AppConstants.SEND_URL;
 		this.preview_url = AppConstants.PREVIEW_URL;
 
 	}
@@ -184,7 +182,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		SendUrl requst = new SendUrl(this.user_url, this.user_email, this.user_from_email);
 
 		VolleyMgr.getInstance().sendRequest(
-				new GsonRequest<SendUrlRsp>(this.url, requst, SendUrlRsp.class,
+				new GsonRequest<SendUrlRsp>(AppConstants.SEND_URL, requst, SendUrlRsp.class,
 						new Listener<SendUrlRsp>() {
 
 							@Override
