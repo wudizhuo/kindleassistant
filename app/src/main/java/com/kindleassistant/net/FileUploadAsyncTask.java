@@ -33,7 +33,6 @@ import java.nio.charset.Charset;
 
 public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
 
-    private String url = AppConstants.UPLOADS_URL;
     private Context context;
     private ProgressDialog pd;
     private long totalSize;
@@ -79,7 +78,7 @@ public class FileUploadAsyncTask extends AsyncTask<File, Integer, String> {
                 publishProgress((int) (100 * transferedBytes / totalSize));
             }
         });
-        return uploadFile(url, progressHttpEntity);
+        return uploadFile(AppConstants.UPLOADS_URL, progressHttpEntity);
     }
 
     @Override

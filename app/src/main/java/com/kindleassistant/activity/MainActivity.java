@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.Response.Listener;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnOpenedListener;
 import com.kindleassistant.App;
@@ -20,13 +19,8 @@ import com.kindleassistant.AppConstants;
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
-import com.kindleassistant.entity.PreView;
-import com.kindleassistant.entity.PreViewRsp;
-import com.kindleassistant.entity.SendUrl;
-import com.kindleassistant.entity.SendUrlRsp;
 import com.kindleassistant.fragment.SlidingMenuRight;
-import com.kindleassistant.manager.VolleyMgr;
-import com.kindleassistant.net.GsonRequest;
+import com.kindleassistant.net.HttpHelper;
 import com.kindleassistant.utils.StatServiceUtil;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -149,7 +143,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 			} else {
 				StatServiceUtil.trackEvent("设置邮箱后发送按钮点击");
-				SendPost();
+				HttpHelper.SendPost(MainActivity.this, this.user_url, this.user_email, this.user_from_email);
 			}
 			break;
 		case R.id.btn_title_right:
@@ -168,85 +162,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 			} else {
 				StatServiceUtil.trackEvent("预览点击");
-				PreView();
+				HttpHelper.PreView(this, this.preview_url, this.user_url);
 			}
 			break;
 		default:
 			break;
 		}
-	}
-
-	// 发送到kindle
-	public void SendPost() {
-		showProgressDialog();
-		SendUrl requst = new SendUrl(this.user_url, this.user_email, this.user_from_email);
-
-		VolleyMgr.getInstance().sendRequest(
-				new GsonRequest<SendUrlRsp>(AppConstants.SEND_URL, requst, SendUrlRsp.class,
-						new Listener<SendUrlRsp>() {
-
-							@Override
-							public void onResponse(SendUrlRsp arg0) {
-								dismissProgressDialog();
-								if (arg0.getStatus() == 0) {
-
-									Toast toast = Toast.makeText(
-											getApplicationContext(), "发送成功",
-											Toast.LENGTH_SHORT);
-									StatServiceUtil.trackEvent("发送按钮-发送成功");
-
-									toast.show();
-								} else {
-									Toast toast = Toast.makeText(
-											getApplicationContext(),
-											arg0.getMsg(), Toast.LENGTH_SHORT);
-									StatServiceUtil.trackEvent("发送按钮-发送失败--"
-											+ arg0.getMsg());
-									toast.show();
-
-								}
-							}
-
-						}));
-
-	}
-
-	// 预览内容
-	public void PreView() {
-		showProgressDialog();
-		PreView requst = new PreView(this.user_url);
-
-		VolleyMgr.getInstance().sendRequest(
-				new GsonRequest<PreViewRsp>(this.preview_url, requst,
-						PreViewRsp.class, new Listener<PreViewRsp>() {
-
-							@Override
-							public void onResponse(PreViewRsp arg0) {
-								dismissProgressDialog();
-								if (arg0.getStatus() == 0) {
-
-									Intent intent1 = new Intent();
-									intent1.setClass(MainActivity.this,
-											PreviewActivity.class);
-									intent1.putExtra("content",
-											arg0.getContent());
-									intent1.putExtra("user_url",
-											MainActivity.this.user_url);
-									startActivity(intent1);
-									StatServiceUtil.trackEvent("预览成功");
-								} else {
-									Toast toast = Toast.makeText(
-											getApplicationContext(),
-											arg0.getMsg(), Toast.LENGTH_SHORT);
-									StatServiceUtil.trackEvent("预览失败--"
-											+ arg0.getMsg());
-									toast.show();
-
-								}
-							}
-
-						}));
-
 	}
 
 
