@@ -17,6 +17,13 @@ import com.kindleassistant.manager.VolleyMgr;
 import com.kindleassistant.utils.StatServiceUtil;
 
 public class HttpHelper {
+
+    public HttpHelper() {
+        RestManager.getInstance().getRestApi();
+    }
+
+
+
     // 发送到kindle
     public static void SendPost(BaseActivity activity, String user_url, String user_email, String user_from_email) {
         activity.showProgressDialog();
