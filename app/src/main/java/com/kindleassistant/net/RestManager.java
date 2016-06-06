@@ -1,5 +1,6 @@
 package com.kindleassistant.net;
 
+import lombok.Getter;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -9,6 +10,9 @@ public class RestManager {
     private static RestManager instance;
     private final RestApi restApi;
 
+    @Getter
+    private final Retrofit retrofit;
+
     public RestManager() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -17,7 +21,7 @@ public class RestManager {
                 .addInterceptor(logging)
                 .build();
 
-        Retrofit retrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("http://api.kindlezhushou.com/v3/")

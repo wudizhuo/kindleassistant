@@ -32,12 +32,7 @@ public class HttpHelper {
                             App.getContext(), "发送成功",
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(
-                            App.getContext(),
-                            "test", Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(
-//                            App.getContext(),
-//                            arg0.getMsg(), Toast.LENGTH_SHORT).show();
+                    ErrorUtils.showError(response);
                 }
             }
 
