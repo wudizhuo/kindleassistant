@@ -47,8 +47,6 @@
     <style name="titleBar">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#ffffffff</item>
-        <item name="android:shadowColor">#101112</item>
-        <item name="android:shadowDy">-1.0</item>
         <item name="android:singleLine">true</item>
     </style>
 

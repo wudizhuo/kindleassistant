@@ -48,7 +48,7 @@
         android:lineSpacingExtra="2sp"
         android:paddingBottom="20dp"
         android:textSize="16dp"
-        android:text="联系作者"
+        android:text="联系作者 \n关注微博：无敌卓"
         android:textColor="@color/actionbar_background" />
 
 </RelativeLayout>
