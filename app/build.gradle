@@ -21,10 +21,19 @@ android {
         versionName "2.1"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("../kindleassistant.jks")
+            storePassword System.getenv("KSTOREPWD")
+            keyAlias "kindlezhushou"
+            keyPassword System.getenv("KEYPWD")
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles 'proguard-project.txt'
+            minifyEnabled false
+            signingConfig signingConfigs.release
         }
     }
 
@@ -35,7 +44,7 @@ android {
     }
 
     lintOptions {
-        checkReleaseBuilds false
+        abortOnError false
     }
 
     packagingOptions {
@@ -51,8 +60,8 @@ android {
 }
 
 dependencies {
-    provided 'org.projectlombok:lombok:1.12.6'
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided 'org.projectlombok:lombok:1.12.6'
     compile 'com.android.support:support-v4:22.2.0+'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.android.support:design:22.2.0'

@@ -64,7 +64,7 @@ public class PreviewActivity extends BaseActivity implements OnClickListener{
 						Intent intent = new Intent (PreviewActivity.this,SettingActivity.class);			
 						startActivity(intent);	
 					}
-				}, 300);
+				}, 100);
 			} else {
 				HttpHelper.send(this, new SendUrl(this.user_url, this.user_email, this.user_from_email));
 			}
