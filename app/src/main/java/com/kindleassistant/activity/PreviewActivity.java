@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
+import com.kindleassistant.entity.SendUrl;
 import com.kindleassistant.net.HttpHelper;
 import com.kindleassistant.utils.StatServiceUtil;
 
@@ -65,7 +66,7 @@ public class PreviewActivity extends BaseActivity implements OnClickListener{
 					}
 				}, 300);
 			} else {
-				HttpHelper.SendPost(PreviewActivity.this, this.user_url, this.user_email, this.user_from_email);
+				HttpHelper.send(this, new SendUrl(this.user_url, this.user_email, this.user_from_email));
 			}
 			break;
 

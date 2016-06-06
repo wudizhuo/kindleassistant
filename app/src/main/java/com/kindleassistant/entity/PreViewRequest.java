@@ -1,11 +1,11 @@
 package com.kindleassistant.entity;
 
 
-public class PreView {
+public class PreViewRequest {
 	private String url;
 	
 
-	public PreView(String url) {
+	public PreViewRequest(String url) {
 		this.url = url;
 	
 	}

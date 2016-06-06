@@ -19,6 +19,8 @@ import com.kindleassistant.AppConstants;
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
+import com.kindleassistant.entity.PreViewRequest;
+import com.kindleassistant.entity.SendUrl;
 import com.kindleassistant.fragment.SlidingMenuRight;
 import com.kindleassistant.net.HttpHelper;
 import com.kindleassistant.utils.StatServiceUtil;
@@ -143,7 +145,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 			} else {
 				StatServiceUtil.trackEvent("设置邮箱后发送按钮点击");
-				HttpHelper.SendPost(MainActivity.this, this.user_url, this.user_email, this.user_from_email);
+				HttpHelper.send(this, new SendUrl(this.user_url, this.user_email, this.user_from_email));
 			}
 			break;
 		case R.id.btn_title_right:
@@ -162,7 +164,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 			} else {
 				StatServiceUtil.trackEvent("预览点击");
-				HttpHelper.PreView(this, this.preview_url, this.user_url);
+				HttpHelper.PreView(this, this.user_url, new PreViewRequest(this.user_url));
 			}
 			break;
 		default:
