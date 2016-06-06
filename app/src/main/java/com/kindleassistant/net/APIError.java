@@ -1,8 +1,8 @@
 package com.kindleassistant.net;
-
-import lombok.Data;
-
-@Data
 public class APIError {
-    private String message;
+    private String error;
+
+    public String getMessage() {
+        return error;
+    }
 }
