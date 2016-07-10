@@ -19,6 +19,7 @@ import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
 import com.kindleassistant.net.ErrorUtils;
+import com.kindleassistant.net.ProgressRequestBody;
 import com.kindleassistant.net.RestManager;
 import com.kindleassistant.utils.ToastUtil;
 import com.nononsenseapps.filepicker.FilePickerActivity;
@@ -27,9 +28,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.MediaType;
 import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -80,8 +79,14 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
         File file = new File(uploadFile);
         List<MultipartBody.Part> list = new ArrayList<>();
 
+        ProgressRequestBody progressRequestBody = new ProgressRequestBody(file, new ProgressRequestBody.UploadCallbacks() {
+            @Override
+            public void onProgressUpdate(int percentage) {
+                showProgressDialog("文件上传中     " + percentage + "%");
+            }
+        });
         list.add(MultipartBody.Part.createFormData
-                ("file", file.getName(), RequestBody.create(MediaType.parse("multipart/form-data"), file)));
+                ("file", file.getName(), progressRequestBody));
         list.add(MultipartBody.Part.createFormData
                 ("from_email", AppPreferences.getFromEmail()));
         list.add(MultipartBody.Part.createFormData
