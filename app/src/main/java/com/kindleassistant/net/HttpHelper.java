@@ -17,7 +17,7 @@ import retrofit2.Callback;
 public class HttpHelper {
 
     public static void send(BaseActivity activity, SendUrl request) {
-        activity.showProgressDialog();
+        activity.showProgressDialog("发送中...");
         RestManager.getInstance().getRestApi().send(request).enqueue(new Callback() {
             @Override
             public void onResponse(Call call, retrofit2.Response response) {

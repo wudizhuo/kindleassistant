@@ -87,7 +87,7 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
         list.add(MultipartBody.Part.createFormData
                 ("to_email", AppPreferences.getToEmail()));
 
-        showProgressDialog();
+        showProgressDialog("文件上传中...");
         RestManager.getInstance().getRestApi().upload(list).enqueue(new Callback() {
             @Override
             public void onResponse(Call call, retrofit2.Response response) {
