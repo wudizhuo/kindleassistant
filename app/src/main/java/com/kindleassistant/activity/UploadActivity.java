@@ -11,7 +11,6 @@ import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kindleassistant.AppPreferences;
@@ -25,14 +24,11 @@ import com.nononsenseapps.filepicker.FilePickerActivity;
 import java.io.File;
 
 public class UploadActivity extends BaseActivity implements OnClickListener {
-    private String uploads_url;
     private String user_email, user_from_email;
     // 要上传的文件路径，放在SD卡根目录下
     private String uploadFile = "";
     private File file;
-    private ImageView image;
     private Button upload;
-    private Button download;
     private static final int FILE_SELECT_CODE = 0;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -44,7 +40,6 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
     }
 
     public void onClick(View v) {
-        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.btn_select:
                 showFileChooser();
