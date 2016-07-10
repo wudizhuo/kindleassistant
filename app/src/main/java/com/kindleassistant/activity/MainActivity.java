@@ -29,15 +29,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	private String preview_url;
 	private String user_url;
-	private String user_email;
-	private String user_from_email;
 	private EditText et_user_url;
 	public static String RIGHT_FRAGMENT = "slidingmenu_right";
 	private SlidingMenu slidingmenu;
 	private boolean isShared;
 
 	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -60,15 +57,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	}
 
 	public void getSendUrl() {
-
-		// 获取分享的网址url
 		Intent intent = getIntent();
-		// 获得Intent的Action
 		String action = intent.getAction();
-		// 获得Intent的MIME type
 		String type = intent.getType();
 		if (Intent.ACTION_SEND.equals(action) && type != null && !isShared) {
-			// 处理获取到的文本，这里我们用TextView显示
 			String sharedUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
 			if (!TextUtils.isEmpty(sharedUrl) && sharedUrl.contains("http://")) {
 				sharedUrl = sharedUrl.substring(sharedUrl.indexOf("http:"));
@@ -77,10 +69,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			}
 		}
 
-		// 获取剪切板里面的内容
 		ClipboardManager clipboarManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
-		// 如果剪切板里面有内容就赋值给textview
 		if (clipboarManager.getText() != null && !isShared) {
 			et_user_url.setText(clipboarManager.getText().toString());
 			isShared = false;
@@ -121,13 +111,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.bt_send:
 			this.user_url = et_user_url.getText().toString();
-			this.user_email = AppPreferences.getEmail();
-			this.user_from_email = AppPreferences.getFromEmail();
-			if (this.user_email == null || this.user_email.length() <= 0 || this.user_from_email == null || this.user_from_email.length() <= 0) {
+			if (TextUtils.isEmpty(AppPreferences.getToEmail())
+					|| TextUtils.isEmpty(AppPreferences.getFromEmail())) {
 				Toast toast = Toast.makeText(getApplicationContext(),
-						"请您先去设置发送邮箱与信任邮箱", Toast.LENGTH_SHORT);
+						"请先设置发送邮箱与信任邮箱", Toast.LENGTH_SHORT);
 				toast.show();
-				StatServiceUtil.trackEvent("未设置邮箱前发送点击");
 				new Handler().postDelayed(new Runnable() {
 					@Override
 					public void run() {
@@ -137,15 +125,13 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 					}
 				}, 300);
 			} else if (TextUtils.isEmpty(this.user_url)) {
-				StatServiceUtil.trackEvent("未填写url前发送点击");
 				Toast toast = Toast.makeText(getApplicationContext(),
 						"请填写文章链接", Toast.LENGTH_SHORT);
 
 				toast.show();
-
 			} else {
 				StatServiceUtil.trackEvent("设置邮箱后发送按钮点击");
-				HttpHelper.send(this, new SendUrl(this.user_url, this.user_email, this.user_from_email));
+				HttpHelper.send(this, new SendUrl(this.user_url, AppPreferences.getToEmail(), AppPreferences.getFromEmail()));
 			}
 			break;
 		case R.id.btn_title_right:

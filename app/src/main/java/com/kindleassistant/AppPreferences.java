@@ -187,7 +187,7 @@ public class AppPreferences {
 				.commit();
 	}
 	
-	public static String getEmail() {
+	public static String getToEmail() {
 		return sPreferences.getString(USER_EMAIL, "");
 	}
 	public static String getFromEmail() {

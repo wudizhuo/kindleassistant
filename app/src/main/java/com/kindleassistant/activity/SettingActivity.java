@@ -29,7 +29,7 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		sp_emails = (Spinner) findViewById(R.id.sp_emails);
 
 
-		String email = AppPreferences.getEmail();
+		String email = AppPreferences.getToEmail();
 		if (!TextUtils.isEmpty(email)) {
 			String[] split = email.split("@");
 			if (split != null && split.length == 2) {
