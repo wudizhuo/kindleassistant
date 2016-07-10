@@ -12,4 +12,8 @@
 	<drawable name="btn_nomal">#2196F3</drawable>
 
     <color name="primary">#2196F3</color>
+
+
+    <color name="primary_dark">#455A64</color>
+    <color name="accent">#536DFE</color>
 </resources>

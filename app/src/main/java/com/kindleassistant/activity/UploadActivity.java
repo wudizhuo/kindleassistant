@@ -1,29 +1,28 @@
 package com.kindleassistant.activity;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
-import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
 import com.kindleassistant.net.FileUploadAsyncTask;
-import com.kindleassistant.utils.LogUtil;
 import com.kindleassistant.utils.StatServiceUtil;
 import com.kindleassistant.utils.ToastUtil;
+import com.nononsenseapps.filepicker.FilePickerActivity;
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 public class UploadActivity extends BaseActivity implements OnClickListener {
     private String uploads_url;
@@ -42,69 +41,6 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
         upload = (Button) findViewById(R.id.upload);
         upload.setOnClickListener(this);
         findViewById(R.id.btn_select).setOnClickListener(this);
-    }
-
-    private void showFileChooser() {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("*/*");
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        try {
-            startActivityForResult(Intent.createChooser(intent, "请选择一个要上传的文件"), FILE_SELECT_CODE);
-        } catch (android.content.ActivityNotFoundException ex) {
-            // Potentially direct the user to the Market with a Dialog
-            Toast.makeText(this, "请安装文件管理器", Toast.LENGTH_SHORT)
-                    .show();
-        }
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // TODO Auto-generated method stub
-        if (resultCode == this.RESULT_OK) {
-            // Get the Uri of the selected file
-            String uri = data.getData().toString();
-            LogUtil.w("uri-----" + uri);
-            String realPathFromURI = null;
-            if (uri.startsWith("file://")) {
-
-                String pattrn = "file://";
-                String[] url = uri.split(pattrn);
-                if (url == null || url.length < 2) {
-                    ToastUtil.showInCenter("选取文件无效,请检查");
-                    return;
-
-                }
-                realPathFromURI = url[1];
-            } else if (uri.startsWith("content://")) {
-                realPathFromURI = getRealPathFromURI(data.getData());
-            }
-            try {
-                this.uploadFile = URLDecoder.decode(realPathFromURI, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            file = new File(uploadFile);
-            float length = file.length();
-            TextView file_text = (TextView) findViewById(R.id.file);
-            file_text.setText(this.uploadFile + "   大小为：" + String.format("%.5f", length / (1024 * 1024)) + "M");
-        }
-    }
-
-
-    public String getRealPathFromURI(Uri contentUri) {
-        Cursor cursor = null;
-        try {
-            String[] proj = {MediaStore.Images.Media.DATA};
-            cursor = this.getContentResolver().query(contentUri, proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
     }
 
     public void onClick(View v) {
@@ -137,5 +73,39 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
                 break;
         }
 
+    }
+
+    private void showFileChooser() {
+        // This always works
+        Intent intent = new Intent(this, FilePickerActivity.class);
+        // This works if you defined the intent filter
+        // Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+
+        // Set these depending on your use case. These are the defaults.
+        intent.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
+        intent.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, false);
+        intent.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
+
+        // Configure initial directory by specifying a String.
+        // You could specify a String like "/storage/emulated/0/", but that can
+        // dangerous. Always use Android's API calls to get paths to the SD-card or
+        // internal memory.
+        intent.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
+
+        startActivityForResult(intent, FILE_SELECT_CODE);
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == FILE_SELECT_CODE && resultCode == Activity.RESULT_OK) {
+            Uri uri = data.getData();
+            uploadFile = uri.getPath();
+
+            file = new File(uploadFile);
+            float length = file.length();
+            TextView file_text = (TextView) findViewById(R.id.file);
+            file_text.setText(this.uploadFile + "   大小为：" + String.format("%.5f", length / (1024 * 1024)) + "M");
+        }
     }
 }
