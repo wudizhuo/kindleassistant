@@ -28,7 +28,7 @@ public class ErrorUtils {
         return error;
     }
 
-    static void showError(Response response) {
+    public static void showError(Response response) {
         Toast.makeText(
                 App.getContext(),
                 parseError(response).getMessage(), Toast.LENGTH_SHORT).show();

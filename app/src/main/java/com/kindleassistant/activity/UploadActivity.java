@@ -12,16 +12,27 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.kindleassistant.App;
 import com.kindleassistant.AppPreferences;
 import com.kindleassistant.R;
 import com.kindleassistant.common.BaseActivity;
-import com.kindleassistant.net.FileUploadAsyncTask;
+import com.kindleassistant.net.ErrorUtils;
+import com.kindleassistant.net.RestManager;
 import com.kindleassistant.utils.StatServiceUtil;
 import com.kindleassistant.utils.ToastUtil;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class UploadActivity extends BaseActivity implements OnClickListener {
     private String user_email, user_from_email;
@@ -60,14 +71,44 @@ public class UploadActivity extends BaseActivity implements OnClickListener {
                         }
                     }, 100);
                 }
-                File file = new File(uploadFile);
-                new FileUploadAsyncTask(UploadActivity.this).execute(file);
+                uploadFile();
                 break;
 
             default:
                 break;
         }
 
+    }
+
+    private void uploadFile() {
+        File file = new File(uploadFile);
+        List<MultipartBody.Part> list = new ArrayList<>();
+
+        list.add(MultipartBody.Part.createFormData
+                ("file", file.getName(), RequestBody.create(MediaType.parse("multipart/form-data"), file)));
+        list.add(MultipartBody.Part.createFormData
+                ("from_email", AppPreferences.getFromEmail()));
+        list.add(MultipartBody.Part.createFormData
+                ("to_email", AppPreferences.getEmail()));
+
+        showProgressDialog();
+        RestManager.getInstance().getRestApi().upload(list).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, retrofit2.Response response) {
+                UploadActivity.this.dismissProgressDialog();
+                if (response.isSuccessful()) {
+                    Toast.makeText(
+                            App.getContext(), "发送成功",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    ErrorUtils.showError(response);
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, Throwable t) {
+            }
+        });
     }
 
     private void showFileChooser() {
