@@ -3,10 +3,12 @@ package com.kindleassistant;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.kindleassistant.manager.UpdateMgr;
 import com.kindleassistant.utils.ChannelUtil;
+import com.qihoo.updatesdk.lib.UpdateHelper;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushManager;
 import com.umeng.analytics.AnalyticsConfig;
@@ -42,6 +44,11 @@ public class App extends Application {
 
     public void appinit() {
         AnalyticsConfig.setChannel(ChannelUtil.getUmengChannal(this));
+
+        UpdateHelper.getInstance().init(getApplicationContext(), ContextCompat.getColor(getContext(), R.color.primary));
+        UpdateHelper.getInstance().setDebugMode(BuildConfig.DEBUG);
+        UpdateHelper.getInstance().autoUpdate(getContext().getPackageName());
+
         UpdateMgr.getInstance().checkUpdate();
         Context context = getApplicationContext();
         XGPushManager.registerPush(context, new XGIOperateCallback() {

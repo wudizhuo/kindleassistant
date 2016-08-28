@@ -17,8 +17,8 @@ android {
         applicationId "com.kindleassistant"
         minSdkVersion 14
         targetSdkVersion 20
-        versionCode 15
-        versionName "2.2"
+        versionCode 16
+        versionName "2.3"
     }
 
     signingConfigs {

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.kindleassistant.App;
 import com.kindleassistant.R;
 import com.kindleassistant.activity.AboutActivity;
 import com.kindleassistant.activity.SettingActivity;
@@ -19,6 +20,7 @@ import com.kindleassistant.manager.UpdateMgr;
 import com.kindleassistant.manager.UpdateMgr.UpdateListener;
 import com.kindleassistant.utils.StatServiceUtil;
 import com.kindleassistant.utils.ToastUtil;
+import com.qihoo.updatesdk.lib.UpdateHelper;
 import com.umeng.fb.FeedbackAgent;
 
 /**
@@ -108,6 +110,7 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 		showProgressDialog("正在检查更新...");
 		StatServiceUtil.trackEvent("检查更新");
 		UpdateMgr.getInstance().checkUpdate();
+		UpdateHelper.getInstance().manualUpdate(App.getContext().getPackageName());
 	}
 
 	/**
