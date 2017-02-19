@@ -6,7 +6,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.kindleassistant.manager.UpdateMgr;
+import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
 import com.kindleassistant.utils.ChannelUtil;
 import com.qihoo.updatesdk.lib.UpdateHelper;
 import com.tencent.android.tpush.XGIOperateCallback;
@@ -44,6 +44,7 @@ public class App extends Application {
 
     public void appinit() {
         AnalyticsConfig.setChannel(ChannelUtil.getUmengChannal(this));
+        FeedbackAPI.init(this, "23639140");
 
         UpdateHelper.getInstance().init(getApplicationContext(), ContextCompat.getColor(getContext(), R.color.primary));
         UpdateHelper.getInstance().setDebugMode(BuildConfig.DEBUG);
