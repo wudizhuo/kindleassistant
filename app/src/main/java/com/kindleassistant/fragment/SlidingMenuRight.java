@@ -18,6 +18,7 @@ import com.kindleassistant.activity.ShareExplainActivity;
 import com.kindleassistant.activity.UploadActivity;
 import com.kindleassistant.common.BaseFragment;
 import com.kindleassistant.utils.StatServiceUtil;
+import com.kindleassistant.utils.ToastUtil;
 import com.qihoo.updatesdk.lib.UpdateHelper;
 
 /**
@@ -87,6 +88,7 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
     }
 
     private void settingFeedback() {
+        ToastUtil.show("同样也欢迎到我的微博：无敌卓，反馈沟通。");
         FeedbackAPI.openFeedbackActivity();
     }
 

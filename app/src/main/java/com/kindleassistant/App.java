@@ -14,7 +14,6 @@ import com.tencent.android.tpush.XGPushManager;
 import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
-import com.umeng.update.UmengUpdateAgent;
 
 public class App extends Application {
     private static Context applicationContext;
@@ -35,11 +34,6 @@ public class App extends Application {
         // 友盟的配置
         // 调试模式
         MobclickAgent.setDebugMode(BuildConfig.DEBUG);
-        // 使用在线配置功能
-        MobclickAgent.updateOnlineConfig(getContext());
-        // 检查友盟的res是否都复制进去了
-        UmengUpdateAgent.setUpdateCheckConfig(BuildConfig.DEBUG);
-        UmengUpdateAgent.setUpdateOnlyWifi(false);
     }
 
     public void appinit() {
@@ -50,7 +44,6 @@ public class App extends Application {
         UpdateHelper.getInstance().setDebugMode(BuildConfig.DEBUG);
         UpdateHelper.getInstance().autoUpdate(getContext().getPackageName());
 
-        UpdateMgr.getInstance().checkUpdate();
         Context context = getApplicationContext();
         XGPushManager.registerPush(context, new XGIOperateCallback() {
             @Override
