@@ -40,9 +40,7 @@ public class App extends Application {
         AnalyticsConfig.setChannel(ChannelUtil.getUmengChannal(this));
         FeedbackAPI.init(this, "23639140");
 
-        UpdateHelper.getInstance().init(getApplicationContext(), ContextCompat.getColor(getContext(), R.color.primary));
-        UpdateHelper.getInstance().setDebugMode(BuildConfig.DEBUG);
-        UpdateHelper.getInstance().autoUpdate(getContext().getPackageName());
+        initUpdateHelper();
 
         Context context = getApplicationContext();
         XGPushManager.registerPush(context, new XGIOperateCallback() {
@@ -60,6 +58,15 @@ public class App extends Application {
 
         FeedbackAgent agent = new FeedbackAgent(this);
         agent.sync();
+    }
+
+    private void initUpdateHelper() {
+        if (getContext().getPackageName().equals("com.googleplay.kindleassistant")) {
+            return;
+        }
+        UpdateHelper.getInstance().init(getApplicationContext(), ContextCompat.getColor(getContext(), R.color.primary));
+        UpdateHelper.getInstance().setDebugMode(BuildConfig.DEBUG);
+        UpdateHelper.getInstance().autoUpdate(getContext().getPackageName());
     }
 
     public static Context getContext() {

@@ -29,6 +29,7 @@ import com.qihoo.updatesdk.lib.UpdateHelper;
 public class SlidingMenuRight extends BaseFragment implements OnClickListener {
     private boolean isClickCheckUpdate;
     private ImageView unread;
+    private View checkUpdate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +40,8 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
         unread = (ImageView) view.findViewById(R.id.unread);
         view.findViewById(R.id.tv_setting).setOnClickListener(this);
         view.findViewById(R.id.feedback).setOnClickListener(this);
-        view.findViewById(R.id.check_update).setOnClickListener(this);
+        checkUpdate = view.findViewById(R.id.check_update);
+        checkUpdate.setOnClickListener(this);
         view.findViewById(R.id.share).setOnClickListener(this);
         view.findViewById(R.id.about).setOnClickListener(this);
         view.findViewById(R.id.uploads).setOnClickListener(this);
@@ -48,6 +50,11 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
     }
 
     private void initBtn() {
+        if (getContext().getPackageName().equals("com.googleplay.kindleassistant")) {
+            checkUpdate.setVisibility(View.GONE);
+        } else {
+            checkUpdate.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onClick(View v) {
