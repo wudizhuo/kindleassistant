@@ -1,1 +1,2 @@
-# kindleassistant
+# Kindle Assistant
+Android Client Code.
