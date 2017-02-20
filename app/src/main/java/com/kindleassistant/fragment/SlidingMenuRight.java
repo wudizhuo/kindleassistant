@@ -89,7 +89,6 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
 
     private void checkUpdate() {
         isClickCheckUpdate = true;
-        showProgressDialog("正在检查更新...");
         StatServiceUtil.trackEvent("检查更新");
         UpdateHelper.getInstance().manualUpdate(App.getContext().getPackageName());
     }
