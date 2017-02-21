@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Kindle助手</string>
+    <string name="setting">设置</string>
+    <string name="upload">上传文件到kindle</string>
+    <string name="update_check">检查更新</string>
+    <string name="help">使用帮助</string>
+    <string name="feedback">意见反馈</string>
+    <string name="clear_content">清空</string>
+    <string name="preview">预览</string>
+    <string name="send_to_kindle">发送到Kindle</string>
+    <string name="main_tips">电脑版本/iPhone \n 请访问 www.kindlezhushou.com</string>
+    <string name="back">返回</string>
+    <string name="menu">菜单</string>
 </resources>

@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/tv_setting"
         style="@style/menu_text"
-        android:text="设置" />
+        android:text="@string/setting" />
 
     <include layout="@layout/divider_line_h" />
 
@@ -22,7 +22,7 @@
         <TextView
             style="@style/menu_text"
             android:layout_width="wrap_content"
-            android:text="检查更新" />
+            android:text="@string/update_check" />
 
         <ImageView
             android:id="@+id/unread"
@@ -37,19 +37,19 @@
     <TextView
         android:id="@+id/uploads"
         style="@style/menu_text"
-        android:text="上传文件到kindle" />
+        android:text="@string/upload" />
 
     <include layout="@layout/divider_line_h" />
     <TextView
         android:id="@+id/share"
         style="@style/menu_text"
-        android:text="使用技巧" />
+        android:text="@string/help" />
 
     <include layout="@layout/divider_line_h" />
 
     <TextView
         android:id="@+id/feedback"
         style="@style/menu_text"
-        android:text="意见反馈" />
+        android:text="@string/feedback" />
 
 </LinearLayout>

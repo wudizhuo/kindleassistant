@@ -83,7 +83,6 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		btn_title_left.setVisibility(View.INVISIBLE);
 		Button btn_title_right = (Button) findViewById(R.id.btn_title_right);
 		btn_title_right.setVisibility(View.VISIBLE);
-		btn_title_right.setText("菜单");
 
 		slidingmenu = new SlidingMenu(this);
 		slidingmenu.setMode(SlidingMenu.RIGHT);

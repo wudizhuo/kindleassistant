@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Kindle Sender</string>
+    <string name="setting">Setting</string>
+    <string name="upload">Upload to Kindle</string>
+    <string name="help">Help</string>
+    <string name="feedback">Feedback</string>
+    <string name="clear_content">Clear</string>
+    <string name="preview">Preview</string>
+    <string name="send_to_kindle">Send to Kindle</string>
+    <string name="main_tips">Desktop/Iphone \n Visit www.kindlezhushou.com</string>
+    <string name="back">Back</string>
+    <string name="menu">Menu</string>
 </resources>

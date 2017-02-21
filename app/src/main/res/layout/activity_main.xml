@@ -30,7 +30,7 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:background="@drawable/btn_selector"
-            android:text="清除内容" />
+            android:text="@string/clear_content" />
 
         <Button
             android:id="@+id/bt_preview"
@@ -42,7 +42,7 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:background="@drawable/btn_selector"
-            android:text="预览内容" />
+            android:text="@string/preview" />
     </LinearLayout>
 
     <Button
@@ -56,7 +56,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginTop="@dimen/common_page_edge_padding"
         android:background="@drawable/btn_selector"
-        android:text="发送到我的Kindle" />
+        android:text="@string/send_to_kindle" />
 
     <TextView
         android:textColor="@color/primary"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:gravity="bottom|center_horizontal"
         android:paddingBottom="10dp"
-        android:text="电脑版/Iphone \n 请访问 www.kindlezhushou.com"
+        android:text="@string/main_tips"
         android:textSize="14sp" />
 
 </LinearLayout>
