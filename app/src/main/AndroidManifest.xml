@@ -49,9 +49,6 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name="com.kindleassistant.activity.PreviewActivity" />
         <activity android:name="com.kindleassistant.activity.ShareExplainActivity" />
-        <activity
-            android:name="com.kindleassistant.activity.AboutActivity"
-            android:label="关于" />
         <activity android:name="com.kindleassistant.activity.UploadActivity"/>
 
         <activity
@@ -82,14 +79,6 @@
             android:name="UMENG_APPKEY"
             android:value="54a8fb2dfd98c577c50005d0"></meta-data>
 
-        <!-- 自动更新服务 -->
-        <service
-            android:name="com.umeng.update.net.DownloadingService"
-            android:process=":DownloadingService"></service>
-
-        <activity
-            android:name="com.umeng.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
         <!-- 【必须】 信鸽receiver广播接收 -->
         <receiver
             android:name="com.tencent.android.tpush.XGPushReceiver"
