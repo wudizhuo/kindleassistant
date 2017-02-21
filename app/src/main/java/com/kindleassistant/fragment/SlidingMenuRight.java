@@ -26,8 +26,6 @@ import com.qihoo.updatesdk.lib.UpdateHelper;
  * @author SunZhuo
  */
 public class SlidingMenuRight extends BaseFragment implements OnClickListener {
-    private boolean isClickCheckUpdate;
-    private ImageView unread;
     private View checkUpdate;
 
     @Override
@@ -36,7 +34,6 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
         View view = inflater.inflate(R.layout.fragment_slidingright, null);
         view.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,
                 LayoutParams.MATCH_PARENT));
-        unread = (ImageView) view.findViewById(R.id.unread);
         view.findViewById(R.id.tv_setting).setOnClickListener(this);
         view.findViewById(R.id.feedback).setOnClickListener(this);
         checkUpdate = view.findViewById(R.id.check_update);
@@ -83,8 +80,6 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
     }
 
     private void checkUpdate() {
-        isClickCheckUpdate = true;
-        StatServiceUtil.trackEvent("检查更新");
         UpdateHelper.getInstance().manualUpdate(App.getContext().getPackageName());
     }
 
