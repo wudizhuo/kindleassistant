@@ -25,6 +25,9 @@ android {
     }
 
     productFlavors {
+        domestic{
+            applicationId "com.kindleassistant"
+        }
         googleplay_release{
             applicationId "com.googleplay.kindleassistant"
         }
