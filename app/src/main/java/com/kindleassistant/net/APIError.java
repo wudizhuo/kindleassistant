@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 public class APIError {
 
-    @SerializedName("error")
+    @SerializedName("message")
     private String message;
 }
