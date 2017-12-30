@@ -82,7 +82,6 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     compile 'com.nononsenseapps:filepicker:3.0.0'
-    compile(name:'alisdk-feedback-release', ext:'aar')
     compile(name:'securityguardaar3-5.1.81', ext:'aar')
     compile files('libs/app-monitor-sdk-2.5.1.1_for_bc_proguard.jar')
     compile files('libs/utdid4all-1.1.5.3_proguard.jar')

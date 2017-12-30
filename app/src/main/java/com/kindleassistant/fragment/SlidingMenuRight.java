@@ -6,17 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
 import com.kindleassistant.App;
 import com.kindleassistant.R;
 import com.kindleassistant.activity.SettingActivity;
 import com.kindleassistant.activity.ShareExplainActivity;
 import com.kindleassistant.activity.UploadActivity;
 import com.kindleassistant.common.BaseFragment;
-import com.kindleassistant.utils.StatServiceUtil;
 import com.kindleassistant.utils.ToastUtil;
 import com.qihoo.updatesdk.lib.UpdateHelper;
 
@@ -84,8 +81,7 @@ public class SlidingMenuRight extends BaseFragment implements OnClickListener {
     }
 
     private void settingFeedback() {
-        ToastUtil.show("同样也欢迎到我的微博：无敌卓，反馈沟通。");
-        FeedbackAPI.openFeedbackActivity();
+        ToastUtil.show("欢迎到我的微博：无敌卓，反馈沟通。");
     }
 
     private void toSetting() {

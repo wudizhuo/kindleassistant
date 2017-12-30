@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
 
-import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
 import com.kindleassistant.utils.ChannelUtil;
 import com.qihoo.updatesdk.lib.UpdateHelper;
 import com.umeng.analytics.AnalyticsConfig;
@@ -22,8 +21,6 @@ public class App extends Application {
 
     public void appinit() {
         AnalyticsConfig.setChannel(ChannelUtil.getUmengChannal(this));
-        FeedbackAPI.init(this, "23639140");
-
         initUpdateHelper();
     }
 
